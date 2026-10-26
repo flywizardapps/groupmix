@@ -45,7 +45,7 @@ header {
   flex-wrap: wrap;
 }
 
-header .brand { font-weight: 600; color: var(--text); text-decoration: none; }
+header .brand { font-weight: 600; }
 header nav a { margin-left: 16px; }
 
 h1 { font-size: 2.2rem; line-height: 1.15; margin: 32px 0 8px; letter-spacing: -0.02em; }
@@ -93,3 +93,39 @@ footer {
 }
 
 footer a { margin-right: 16px; }
+
+
+/* Häufige Fragen: zugeklappt, per Tipp aufklappbar. */
+.faq { margin-top: 8px; border-top: 1px solid var(--rule); }
+
+.faq details { border-bottom: 1px solid var(--rule); }
+
+.faq summary {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+  padding: 14px 0;
+  font-weight: 600;
+}
+
+.faq summary::-webkit-details-marker { display: none; }
+
+.faq summary::after {
+  content: "+";
+  color: var(--accent);
+  font-size: 1.3em;
+  line-height: 1;
+}
+
+.faq details[open] summary::after { content: "−"; }
+
+.faq summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; border-radius: 4px; }
+
+.faq .answer { padding-bottom: 16px; }
+
+.faq h4 { font-size: 1rem; margin: 12px 0 4px; }
+
+ol { margin: 0 0 12px; padding-left: 1.4em; }

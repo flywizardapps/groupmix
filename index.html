@@ -10,7 +10,7 @@
 </head>
 <body>
   <header>
-    <a class="brand" href="/groupmix/">FlyWizard</a>
+    <span class="brand">FlyWizardApps</span>
     <nav><a href="/groupmix/datenschutz/">Datenschutz</a><a href="/groupmix/en/" hreflang="en" lang="en">English</a></nav>
   </header>
   <main>
@@ -23,37 +23,107 @@
     </div>
 
     <h2>Häufige Fragen</h2>
+    <div class="faq">
 
-    <h3>Wo sind meine Daten gespeichert?</h3>
-    <p>Nur auf deinem Gerät, verschlüsselt. GroupMix nutzt keine Cloud, kein Konto und keine Internetverbindung. Die Daten sind auch nicht im iCloud- oder Computer-Backup des Geräts enthalten. Wenn das Gerät verloren geht oder du die App löschst, sind sie weg, es sei denn, du hast ein Backup erstellt.</p>
+      <details id="daten">
+        <summary>Wo sind meine Daten gespeichert?</summary>
+        <div class="answer">
+          <p>Nur auf deinem Gerät, verschlüsselt. GroupMix nutzt keine Cloud, kein Konto und keine Internetverbindung. Die Daten sind auch nicht im iCloud- oder Computer-Backup des Geräts enthalten.</p>
+          <p>Wenn das Gerät verloren geht oder du die App löschst, sind die Daten weg, es sei denn, du hast ein Backup erstellt (siehe nächste Frage).</p>
+        </div>
+      </details>
 
-    <h3>Wie sichere ich meine Daten oder übertrage sie auf ein anderes Gerät?</h3>
-    <p>In der Kursliste oben auf „…“ tippen und „Backup erstellen“ wählen. Du vergibst ein Passwort, mit dem die Datei verschlüsselt wird. Sichere die Datei anschließend in „Dateien“ oder sende sie per AirDrop an dein anderes Gerät. Dort öffnest du die Datei oder wählst „…“ und dann „Backup importieren“.</p>
-    <p>Das Passwort wird nirgends gespeichert. Ohne Passwort lässt sich ein Backup nicht wiederherstellen. GroupMix erinnert dich, wenn das letzte Backup länger zurückliegt.</p>
+      <details id="backup">
+        <summary>Wie sichere ich meine Daten oder übertrage sie auf ein anderes Gerät?</summary>
+        <div class="answer">
+          <h4>Backup erstellen</h4>
+          <ol>
+            <li>In der Kursliste oben auf „…“ tippen und „Backup erstellen“ wählen.</li>
+            <li>Ein Passwort mit mindestens 8 Zeichen zweimal eingeben und auf den Haken tippen.</li>
+            <li>Auf „Teilen“ tippen und die Datei in „Dateien“ sichern oder per AirDrop an dein anderes Gerät senden.</li>
+          </ol>
+          <h4>Backup importieren</h4>
+          <ol>
+            <li>Die Backup-Datei antippen, zum Beispiel in „Dateien“. Oder in der Kursliste oben auf „…“ tippen und „Backup importieren“ wählen.</li>
+            <li>Das Passwort eingeben.</li>
+            <li>„Ergänzen“ wählen, damit vorhandene Kurse bleiben, oder „Ersetzen“, damit nur die Kurse aus dem Backup übrig bleiben. Dann auf den Haken tippen.</li>
+          </ol>
+          <p>Das Passwort wird nirgends gespeichert. Ohne Passwort lässt sich ein Backup nicht wiederherstellen.</p>
+          <h4>Backup-Erinnerung</h4>
+          <p>Liegt das letzte Backup mehr als 30 Tage zurück, zeigt GroupMix oben in der Kursliste einen Hinweis. „Später erinnern“ blendet ihn für 7 Tage aus. Ganz ausschalten kannst du die Erinnerung in der Kursliste unter „…“ mit dem Schalter „An Backup erinnern“.</p>
+        </div>
+      </details>
 
-    <h3>Was passiert, wenn ich meinen Bildschirm übertrage?</h3>
-    <p>Sobald du den Bildschirm per AirPlay oder Kabel überträgst oder aufnimmst, blendet GroupMix Niveau, Gender und Regeln automatisch aus. Die Gruppenkarten werden größer, und das Display bleibt an, solange die Gruppen zu sehen sind.</p>
+      <details id="spiegelung">
+        <summary>Was passiert, wenn ich meinen Bildschirm übertrage?</summary>
+        <div class="answer">
+          <p>Sobald du den Bildschirm per AirPlay oder Kabel überträgst oder aufnimmst, blendet GroupMix Niveau, Gender und Regeln automatisch aus. Die Gruppenkarten werden größer, und das Display bleibt an, solange die Gruppen zu sehen sind. Du musst dafür nichts einstellen.</p>
+        </div>
+      </details>
 
-    <h3>Wie übernehme ich eine Klassenliste?</h3>
-    <p>Im Kurs auf „+“ tippen. Dort gibt es drei Wege:</p>
-    <ul>
-      <li><strong>Person hinzufügen:</strong> einzeln eintippen.</li>
-      <li><strong>Namensliste einfügen:</strong> ein Name pro Zeile, auf Wunsch mit Gender und Niveau, z. B. <code>Hedwig L.;w;4</code>. Spalten aus Excel oder Numbers lassen sich direkt einfügen.</li>
-      <li><strong>Aus Datei importieren:</strong> eine CSV-Datei mit Kopfzeile, zum Beispiel:</li>
-    </ul>
+      <details id="klassenliste">
+        <summary>Wie übernehme ich eine Klassenliste?</summary>
+        <div class="answer">
+          <p>Im Kurs oben auf „+“ tippen. Dort gibt es drei Wege.</p>
+          <h4>Person hinzufügen</h4>
+          <p>Namen einzeln eintippen.</p>
+          <h4>Namensliste einfügen</h4>
+          <ol>
+            <li>Die Liste kopieren, zum Beispiel aus einer E-Mail, aus Excel oder aus Numbers.</li>
+            <li>Im Kurs auf „+“ tippen und „Namensliste einfügen“ wählen.</li>
+            <li>Die Liste einfügen: ein Name pro Zeile, auf Wunsch mit Gender und Niveau, zum Beispiel <code>Hedwig L.;w;4</code>.</li>
+            <li>Die Vorschau prüfen und auf den Haken tippen.</li>
+          </ol>
+          <h4>Aus Datei importieren</h4>
+          <ol>
+            <li>Eine CSV-Datei mit Kopfzeile vorbereiten, zum Beispiel:
 <pre>Vorname;Nachname;Gender;Niveau
 Hedwig;Lange;w;4
-Konrad;Maurer;m;</pre>
-    <p>Gender: m, w (oder f), d oder leer. Niveau: 1 (niedriger) bis 5 (höher), leer bedeutet mittel. Aus Vor- und Nachname wird „Hedwig L.“. Weitere Spalten werden ignoriert.</p>
+Konrad;Maurer;m;</pre></li>
+            <li>Im Kurs auf „+“ tippen und „Aus Datei importieren“ wählen.</li>
+            <li>„CSV-Datei auswählen“ antippen und die Datei wählen.</li>
+            <li>Die Vorschau prüfen und auf den Haken tippen.</li>
+          </ol>
+          <p>Gender: m, w (oder f), d oder leer. Niveau: 1 (niedriger) bis 5 (höher), leer bedeutet mittel. Aus Vor- und Nachname wird „Hedwig L.“. Weitere Spalten werden ignoriert.</p>
+        </div>
+      </details>
 
-    <h3>Was bedeutet das Niveau?</h3>
-    <p>Deine eigene Einschätzung einer Person im Vergleich zum Kurs, in fünf Stufen von „niedrig“ bis „hoch“. Die Angabe ist freiwillig. Sie wird nur zum Einteilen genutzt und erscheint nie im geteilten Bild oder Text.</p>
+      <details id="niveau">
+        <summary>Was bedeutet das Niveau?</summary>
+        <div class="answer">
+          <p>Das Niveau ist deine Einschätzung, wo eine Person im Vergleich zum übrigen Kurs steht, zum Beispiel beim Lernstand in deinem Fach. Du wählst eine von fünf Stufen von „niedrig“ bis „hoch“. Die Angabe ist freiwillig.</p>
+          <p>Mit dem Niveau kannst du Gruppen auf zwei Arten bilden:</p>
+          <ul>
+            <li><strong>Gemischtes Niveau:</strong> Jede Gruppe bekommt Personen mit höherem und niedrigerem Lernstand und ist im Mittel etwa gleich stark.</li>
+            <li><strong>Ähnliches Niveau:</strong> Personen mit ähnlichem Lernstand arbeiten zusammen, zum Beispiel an unterschiedlich schwierigen Aufgaben.</li>
+          </ul>
+          <p>Das Niveau wird nur zum Einteilen genutzt. Es erscheint nie im geteilten Bild oder Text und wird bei der Bildschirmübertragung ausgeblendet.</p>
+        </div>
+      </details>
 
-    <h3>Was mache ich am Ende des Schuljahres?</h3>
-    <p>Wenn ein Zeitraum vorbei ist, zeigt die Kursliste einen Hinweis. Mit „Aufräumen“ verschiebst du Kurse in den neuen Zeitraum (aus 8b wird auf Wunsch 9b) und löschst den Rest. Personenbezogene Daten solltest du nur so lange aufbewahren wie nötig.</p>
+      <details id="schuljahr">
+        <summary>Was mache ich am Ende des Schuljahres?</summary>
+        <div class="answer">
+          <p>Wenn ein Zeitraum vorbei ist, zeigt die Kursliste oben einen Hinweis.</p>
+          <ol>
+            <li>Im Hinweis auf „Aufräumen“ tippen.</li>
+            <li>Den neuen Zeitraum prüfen, zum Beispiel 2026/27. Mit „Namen hochzählen“ wird aus 8b automatisch 9b.</li>
+            <li>Die Kurse anhaken, die du weiterführst, und „Angehakte Kurse verschieben“ wählen.</li>
+            <li>Die übrigen Kurse löschen.</li>
+          </ol>
+          <p>Personenbezogene Daten solltest du nur so lange aufbewahren wie nötig.</p>
+        </div>
+      </details>
 
-    <h3>Darf ich GroupMix in der Schule nutzen?</h3>
-    <p>GroupMix verarbeitet Namen und, wenn du sie einträgst, Einschätzungen von Schülerinnen und Schülern. Für die Nutzung privater Geräte gelten die Datenschutzvorgaben deines Bundeslandes und deiner Schule. Frag im Zweifel die Schulleitung oder die Datenschutzbeauftragten. Wie GroupMix mit Daten umgeht, steht in der <a href="/groupmix/datenschutz/">Datenschutzerklärung</a>.</p>
+      <details id="schule">
+        <summary>Darf ich GroupMix in der Schule nutzen?</summary>
+        <div class="answer">
+          <p>GroupMix verarbeitet Namen und, wenn du sie einträgst, Lernstandseinschätzungen von Schülerinnen und Schülern. Für die Nutzung privater Geräte gelten die Datenschutzvorgaben deines Bundeslandes und deiner Schule. Frag im Zweifel die Schulleitung oder die Datenschutzbeauftragten.</p>
+          <p>Wie GroupMix mit Daten umgeht, steht in der <a href="/groupmix/datenschutz/">Datenschutzerklärung</a>.</p>
+        </div>
+      </details>
+
+    </div>
   </main>
   <footer>
     <a href="/groupmix/datenschutz/">Datenschutz</a><a href="mailto:flywizardapps@icloud.com">Kontakt</a>
