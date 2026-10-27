@@ -135,3 +135,17 @@ footer a { margin-right: 16px; }
 .faq h4 { font-size: 1rem; margin: 12px 0 4px; }
 
 ol { margin: 0 0 12px; padding-left: 1.4em; }
+
+/* Anleitung: Inhaltsverzeichnis und Sprungziele. */
+.toc {
+  background: var(--card);
+  border-radius: 16px;
+  padding: 20px;
+  margin: 24px 0;
+}
+
+.toc ol { margin: 8px 0 0; }
+
+section[id], h3[id] { scroll-margin-top: 16px; }
+
+header nav a[aria-current="page"] { color: var(--text); }

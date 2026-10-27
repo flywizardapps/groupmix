@@ -11,11 +11,16 @@
 <body>
   <header>
     <span class="brand">FlyWizardApps</span>
-    <nav><a href="/groupmix/datenschutz/">Datenschutz</a><a href="/groupmix/en/" hreflang="en" lang="en">English</a></nav>
+    <nav><a href="/groupmix/" aria-current="page">Start</a><a href="/groupmix/anleitung/">Anleitung</a><a href="/groupmix/datenschutz/">Datenschutz</a><a href="/groupmix/en/" hreflang="en" lang="en">English</a></nav>
   </header>
   <main>
     <h1>GroupMix</h1>
     <p class="lead">Gruppen für den Unterricht in Sekunden: zufällig oder nach Niveau, mit Regeln und Spiegelungsschutz. Alle Daten bleiben verschlüsselt auf deinem Gerät.</p>
+
+    <div class="card">
+      <strong>Anleitung</strong><br>
+      Schritt für Schritt: Kurse und Personen anlegen, Gruppen bilden, Regeln, Ergebnis teilen und Backup. <a href="/groupmix/anleitung/">Zur Anleitung</a>
+    </div>
 
     <div class="card">
       <strong>Fragen, Fehler, Wünsche?</strong><br>
@@ -36,55 +41,23 @@
       <details id="backup">
         <summary>Wie sichere ich meine Daten oder übertrage sie auf ein anderes Gerät?</summary>
         <div class="answer">
-          <h4>Backup erstellen</h4>
-          <ol>
-            <li>In der Kursliste oben auf „…“ tippen und „Backup erstellen“ wählen.</li>
-            <li>Ein Passwort mit mindestens 8 Zeichen zweimal eingeben und auf den Haken tippen.</li>
-            <li>Auf „Teilen“ tippen und die Datei in „Dateien“ sichern oder per AirDrop an dein anderes Gerät senden.</li>
-          </ol>
-          <h4>Backup importieren</h4>
-          <ol>
-            <li>Die Backup-Datei antippen, zum Beispiel in „Dateien“. Oder in der Kursliste oben auf „…“ tippen und „Backup importieren“ wählen.</li>
-            <li>Das Passwort eingeben.</li>
-            <li>„Ergänzen“ wählen, damit vorhandene Kurse bleiben, oder „Ersetzen“, damit nur die Kurse aus dem Backup übrig bleiben. Dann auf den Haken tippen.</li>
-          </ol>
-          <p>Das Passwort wird nirgends gespeichert. Ohne Passwort lässt sich ein Backup nicht wiederherstellen.</p>
-          <h4>Backup-Erinnerung</h4>
-          <p>Liegt das letzte Backup mehr als 30 Tage zurück, zeigt GroupMix oben in der Kursliste einen Hinweis. „Später erinnern“ blendet ihn für 7 Tage aus. Ganz ausschalten kannst du die Erinnerung in der Kursliste unter „…“ mit dem Schalter „An Backup erinnern“.</p>
+          <p>Erstelle in der Kursliste über „…“ und „Backup erstellen“ eine verschlüsselte Backup-Datei und importiere sie auf dem anderen Gerät mit „Backup importieren“. Das Passwort wird nirgends gespeichert.</p>
+          <p>Die Schritte stehen in der Anleitung: <a href="/groupmix/anleitung/#backup">Backup und Gerätewechsel</a>.</p>
         </div>
       </details>
 
       <details id="spiegelung">
         <summary>Was passiert, wenn ich meinen Bildschirm übertrage?</summary>
         <div class="answer">
-          <p>Sobald du den Bildschirm per AirPlay oder Kabel überträgst oder aufnimmst, blendet GroupMix Niveau, Gender und Regeln automatisch aus. Die Gruppenkarten werden größer, und das Display bleibt an, solange die Gruppen zu sehen sind. Du musst dafür nichts einstellen.</p>
+          <p>Sobald du den Bildschirm per AirPlay oder Kabel überträgst oder aufnimmst, blendet GroupMix Niveau, Gender und Regeln automatisch aus. Die Gruppenkarten werden größer, und das Display bleibt an, solange die Gruppen zu sehen sind. Du musst dafür nichts einstellen. Mehr dazu in der Anleitung unter <a href="/groupmix/anleitung/#zeigen-teilen">Ergebnis zeigen und teilen</a>.</p>
         </div>
       </details>
 
       <details id="klassenliste">
         <summary>Wie übernehme ich eine Klassenliste?</summary>
         <div class="answer">
-          <p>Im Kurs oben auf „+“ tippen. Dort gibt es drei Wege.</p>
-          <h4>Person hinzufügen</h4>
-          <p>Namen einzeln eintippen.</p>
-          <h4>Namensliste einfügen</h4>
-          <ol>
-            <li>Die Liste kopieren, zum Beispiel aus einer E-Mail, aus Excel oder aus Numbers.</li>
-            <li>Im Kurs auf „+“ tippen und „Namensliste einfügen“ wählen.</li>
-            <li>Die Liste einfügen: ein Name pro Zeile, auf Wunsch mit Gender und Niveau, zum Beispiel <code>Hedwig L.;w;4</code>.</li>
-            <li>Die Vorschau prüfen und auf den Haken tippen.</li>
-          </ol>
-          <h4>Aus Datei importieren</h4>
-          <ol>
-            <li>Eine CSV-Datei mit Kopfzeile vorbereiten, zum Beispiel:
-<pre>Vorname;Nachname;Gender;Niveau
-Hedwig;Lange;w;4
-Konrad;Maurer;m;</pre></li>
-            <li>Im Kurs auf „+“ tippen und „Aus Datei importieren“ wählen.</li>
-            <li>„CSV-Datei auswählen“ antippen und die Datei wählen.</li>
-            <li>Die Vorschau prüfen und auf den Haken tippen.</li>
-          </ol>
-          <p>Gender: m, w (oder f), d oder leer. Niveau: 1 (niedriger) bis 5 (höher), leer bedeutet mittel. Aus Vor- und Nachname wird „Hedwig L.“. Weitere Spalten werden ignoriert.</p>
+          <p>Im Kurs auf „+“ tippen: Du kannst Personen einzeln eintragen, eine Namensliste einfügen oder eine CSV-Datei importieren.</p>
+          <p>Das genaue Format steht in der Anleitung: <a href="/groupmix/anleitung/#personen">Personen eintragen</a>.</p>
         </div>
       </details>
 
@@ -97,21 +70,15 @@ Konrad;Maurer;m;</pre></li>
             <li><strong>Gemischtes Niveau:</strong> Jede Gruppe bekommt Personen mit höherem und niedrigerem Lernstand und ist im Mittel etwa gleich stark.</li>
             <li><strong>Ähnliches Niveau:</strong> Personen mit ähnlichem Lernstand arbeiten zusammen, zum Beispiel an unterschiedlich schwierigen Aufgaben.</li>
           </ul>
-          <p>Das Niveau wird nur zum Einteilen genutzt. Es erscheint nie im geteilten Bild oder Text und wird bei der Bildschirmübertragung ausgeblendet.</p>
+          <p>Das Niveau wird nur zum Einteilen genutzt. Es erscheint nie im geteilten Bild oder Text und wird bei der Bildschirmübertragung ausgeblendet. Mehr dazu in der Anleitung unter <a href="/groupmix/anleitung/#niveau">Gender und Niveau</a>.</p>
         </div>
       </details>
 
       <details id="schuljahr">
         <summary>Was mache ich am Ende des Schuljahres?</summary>
         <div class="answer">
-          <p>Wenn ein Zeitraum vorbei ist, zeigt die Kursliste oben einen Hinweis.</p>
-          <ol>
-            <li>Im Hinweis auf „Aufräumen“ tippen.</li>
-            <li>Den neuen Zeitraum prüfen, zum Beispiel 2026/27. Mit „Namen hochzählen“ wird aus 8b automatisch 9b.</li>
-            <li>Die Kurse anhaken, die du weiterführst, und „Angehakte Kurse verschieben“ wählen.</li>
-            <li>Die übrigen Kurse löschen.</li>
-          </ol>
-          <p>Personenbezogene Daten solltest du nur so lange aufbewahren wie nötig.</p>
+          <p>Ist ein Zeitraum vorbei, zeigt die Kursliste oben einen Hinweis. Mit „Aufräumen“ führst du Kurse in den neuen Zeitraum weiter und löschst die übrigen.</p>
+          <p>Die Schritte stehen in der Anleitung: <a href="/groupmix/anleitung/#zeitraum-ende">Ende des Zeitraums</a>.</p>
         </div>
       </details>
 
@@ -126,7 +93,7 @@ Konrad;Maurer;m;</pre></li>
     </div>
   </main>
   <footer>
-    <a href="/groupmix/datenschutz/">Datenschutz</a><a href="mailto:flywizardapps@icloud.com">Kontakt</a>
+    <a href="/groupmix/anleitung/">Anleitung</a><a href="/groupmix/datenschutz/">Datenschutz</a><a href="mailto:flywizardapps@icloud.com">Kontakt</a>
   </footer>
 </body>
 </html>

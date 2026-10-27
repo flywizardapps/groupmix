@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GroupMix – Guide</title>
+  <meta name="description" content="Guide for GroupMix: set up courses and people, make groups, rules, adjust and share the result, backups, and the end of a term.">
+  <link rel="stylesheet" href="/groupmix/style.css">
+  <link rel="alternate" hreflang="de" href="/groupmix/anleitung/">
+</head>
+<body>
+  <header>
+    <span class="brand">FlyWizardApps</span>
+    <nav><a href="/groupmix/en/">Home</a><a href="/groupmix/en/guide/" aria-current="page">Guide</a><a href="/groupmix/en/privacy/">Privacy</a><a href="/groupmix/anleitung/" hreflang="de" lang="de">Deutsch</a></nav>
+  </header>
+  <main>
+    <h1>Guide</h1>
+    <p class="lead">How to make groups with GroupMix: from your first course to backups and cleaning up at the end of a term.</p>
+
+    <nav class="toc" aria-label="Contents">
+      <strong>Contents</strong>
+      <ol>
+        <li><a href="#getting-started">Getting Started</a></li>
+        <li><a href="#people">Adding People</a></li>
+        <li><a href="#make-groups">Making Groups</a></li>
+        <li><a href="#rules">Rules: Together or Apart</a></li>
+        <li><a href="#adjust-result">Adjusting the Result</a></li>
+        <li><a href="#show-share">Showing and Sharing the Result</a></li>
+        <li><a href="#history">Last Grouping and History</a></li>
+        <li><a href="#backup">Backups and Switching Devices</a></li>
+        <li><a href="#end-of-term">End of a Term</a></li>
+      </ol>
+    </nav>
+
+    <section id="getting-started">
+      <h2>Getting Started</h2>
+
+      <h3>Welcome and sample course</h3>
+      <p>When you first open GroupMix, it shows “Welcome to GroupMix” with a short overview. Tap “Continue” to close the introduction. As long as you have no courses yet, you can choose “Try with Sample Course” instead. The “Sample Course” contains fictional people with gender and level and one rule, so you can try out all features. You delete it like any other course.</p>
+      <p>You can open the introduction again later in the course list via “…” and “Introduction”. An empty course list also has a “Create Sample Course” button.</p>
+
+      <h3>Create a course</h3>
+      <ol>
+        <li>In the course list, tap “+” at the top (in an empty list, tap “Create Course”).</li>
+        <li>Under “Name”, enter the name of the course, for example 8b.</li>
+        <li>Optionally enter a “Term”, for example 2026/27. It is prefilled with the term of the course you created last. The course list is organized by term; courses without a term appear under “No Term”.</li>
+        <li>Optionally enter a “Description”, for example Mathematics.</li>
+        <li>Tap the checkmark to save the course. The X closes the form. If you changed something, GroupMix asks “Discard changes?”.</li>
+      </ol>
+      <p class="muted">If the course already exists in the same term, GroupMix warns you. You can still save.</p>
+
+      <h3>Edit and delete a course</h3>
+      <ul>
+        <li><strong>In the course list:</strong> Tap “Edit” at the top. Every row gets a “…” menu with “Edit”, “Copy for New Term”, and “Delete”. The same menu opens when you touch and hold a row. Tap “Done” to finish editing.</li>
+        <li><strong>In the course:</strong> Tap “…” at the top and choose “Edit Course”, “Copy for New Term”, or “Delete Course”. The edit form also has a red “Delete Course” button at the bottom.</li>
+        <li><strong>Deleting</strong> always asks first: All people, rules, and groupings in the course are deleted too.</li>
+        <li><strong>Copy for New Term</strong> creates a copy; the old course stays unchanged. Name and term are suggested (8b becomes 9b). The people are copied with gender and level (all marked present), and so are the rules, but saved groupings are not.</li>
+      </ul>
+      <p class="muted">On iPad with the sidebar, “Edit Courses” is in the “…” menu of the course list.</p>
+    </section>
+
+    <section id="people">
+      <h2>Adding People</h2>
+      <p>Open a course and tap “+” at the top. There are three ways: “Add Person”, “Paste Name List”, and “Import from File”. In a course without people, the same three ways appear as buttons on screen.</p>
+
+      <h3>Add a person</h3>
+      <ol>
+        <li>Tap “+” and choose “Add Person”.</li>
+        <li>Enter the “Display Name”, for example Hedwig L.</li>
+        <li>Optionally set “Gender” and “Level” (see below).</li>
+        <li>Tap the checkmark. “Save and Add Another Person” saves the person and leaves the form ready for the next one.</li>
+      </ol>
+      <p class="muted">If the name already exists in the course, GroupMix warns you. You can still save. Two people with the same name are marked with a warning symbol in the list.</p>
+
+      <h3 id="level">Gender and level</h3>
+      <p>Both are optional.</p>
+      <ul>
+        <li><strong>Gender:</strong> “m” (male), “f” (female), “x” (non-binary), or “n/a” (not specified). The default is “n/a”. Gender only has an effect if you turn on “Balance Gender”.</li>
+        <li><strong>Level:</strong> Your assessment of the person compared to the course, for example their current attainment. You set it with a slider between “Lower” and “Higher”. The five steps are “Low”, “Somewhat low”, “Medium”, “Somewhat high”, and “High”. The default is “Medium”. Level only has an effect with “Mixed Levels” and “Similar Levels”.</li>
+      </ul>
+      <p class="muted">Level and gender never appear in a shared image or text and are hidden while you mirror your screen.</p>
+
+      <h3>Paste a name list</h3>
+      <ol>
+        <li>Copy the list, for example from an email, Excel, or Numbers.</li>
+        <li>In the course, tap “+” and choose “Paste Name List”.</li>
+        <li>Paste the list into the field under “List”.</li>
+        <li>Check the preview: At the top it says how many people will be imported and how many rows with errors will be skipped. Rows with errors are marked and give the reason.</li>
+        <li>Tap the checkmark.</li>
+      </ol>
+      <p>The format: one name per line. Gender and level can follow after a semicolon.</p>
+<pre>Hedwig L.;f;4
+Konrad M.;m
+Ottokar T.</pre>
+      <ul>
+        <li>Gender: m, f, x, or empty (not specified). Written-out values such as “male” or “female” are recognized too.</li>
+        <li>Level: 1 (lower) to 5 (higher) or empty (medium).</li>
+        <li>Columns copied from Excel or Numbers work too (separated by tab or semicolon). A first line starting with “Name” is skipped as a header row.</li>
+      </ul>
+
+      <h3>Import from a CSV file</h3>
+      <ol>
+        <li>Have the list ready as a CSV file. Export a spreadsheet from Excel or Numbers as CSV first; GroupMix doesn’t read other formats such as .xlsx.</li>
+        <li>In the course, tap “+” and choose “Import from File”. The sheet first explains the “File Format”.</li>
+        <li>Tap “Choose CSV File…” and select the file. “Choose Another CSV File…” switches to a different file.</li>
+        <li>Check the preview. Below the file row, it says which columns are not imported (“Not imported: …”).</li>
+        <li>Tap the checkmark.</li>
+      </ol>
+      <h3>CSV file format</h3>
+      <p>The first row contains the column titles, followed by one person per row. For example:</p>
+<pre>First Name;Last Name;Gender;Level
+Hedwig;Lange;f;4
+Konrad;Maurer;m;</pre>
+      <ul>
+        <li><strong>“Name”</strong>: the name as it appears in the app, for example Hedwig L.</li>
+        <li><strong>“First Name” and “Last Name”</strong>: can be used instead of “Name”. Hedwig and Lange become Hedwig L. If “Name” sits next to “First Name” without “Last Name”, “Name” is treated as the last name.</li>
+        <li><strong>“Gender”</strong> (optional): m, f, or x. Empty means not specified.</li>
+        <li><strong>“Level”</strong> (optional): 1 (lower) to 5 (higher). Empty means medium.</li>
+      </ul>
+      <p>The order of the columns doesn’t matter. Additional columns, for example “Class”, are ignored. German column titles (such as <code>Vorname</code>, <code>Nachname</code>, <code>Geschlecht</code>, <code>Niveau</code>) are recognized as well. GroupMix detects semicolon, comma, or tab as the separator. If the file has no recognized header row, the columns are read as Name, Gender, and Level, as in the name list.</p>
+      <p class="muted">GroupMix only reads the file and doesn’t copy it. Files larger than about 1 MB are too large for a list of people. If the file doesn’t match the format, GroupMix shows an error message instead of the preview, and nothing is imported.</p>
+
+      <h3>Edit and delete people</h3>
+      <ul>
+        <li>Tap “Edit” at the top of the course. Every row gets a “…” menu with “Edit” and “Delete”. The same menu opens when you touch and hold a row.</li>
+        <li>The edit form has a red “Delete Person” button at the bottom.</li>
+        <li>Deleting asks first and names the consequences, for example that the person is also removed from rules. Rules with only one person left afterward are deleted too.</li>
+      </ul>
+
+      <h3>Attendance</h3>
+      <p>Above the list of people, “Present Today” shows how many are present, for example “18 of 22”. Use the switch in each row to set who is there. People who are absent appear dimmed and are ignored when making groups. On every new day, everyone is marked present again.</p>
+      <p>If no one is present, a notice with the “Mark All Present” button appears above the list, and “Make Groups” is dimmed.</p>
+      <p>Via “…” and “Show Level and Gender”, you show level and gender in the list of people. They are hidden by default.</p>
+    </section>
+
+    <section id="make-groups">
+      <h2>Making Groups</h2>
+
+      <h3>The steps</h3>
+      <ol>
+        <li><strong>Attendance:</strong> Open the course and check under “Present Today” who is there.</li>
+        <li><strong>Grouping:</strong> Tap “Make Groups” at the bottom. On the “Grouping” screen, you set the group size and composition. GroupMix remembers all settings per course.</li>
+        <li><strong>Result:</strong> Tap “Create Groups” at the bottom. The result appears on the “Groups” screen as cards with group numbers. “Regroup” creates a different split with the same settings.</li>
+      </ol>
+      <p>The back arrow in the result takes you back to the settings and discards the result. To save it, tap “Done” (see <a href="#adjust-result">Adjusting the Result</a>).</p>
+
+      <h3>Number of groups or people per group</h3>
+      <p>Under “Group Size”, “Make Groups By” lets you choose between “Number of Groups” and “People per Group”. Set the value with the stepper, for example “4 groups” or “4 people per group”. Below it you see the outcome, for example “Results in 4 groups with 5 people each.” Group sizes always differ by at most one person.</p>
+      <p>If the split doesn’t work out evenly, a notice appears, for example “22 people can’t be split evenly into groups of 4.” Below it you choose:</p>
+      <ul>
+        <li><strong>“Prefer Smaller Groups”</strong> (at most): No group is larger than your setting. With 26 people and 6 per group, this gives “1 group with 6 and 4 groups with 5 people”.</li>
+        <li><strong>“Prefer Larger Groups”</strong> (at least): No group is smaller than your setting. With 26 people and 6 per group, this gives “2 groups with 7 and 2 groups with 6 people”.</li>
+      </ul>
+      <p class="muted">Each row shows the concrete result, so you can compare directly.</p>
+
+      <h3>Composition</h3>
+      <p>Under “Composition”, you choose exactly one type:</p>
+      <ul>
+        <li><strong>“Random”:</strong> Everyone is randomly assigned to groups.</li>
+        <li><strong>“Mixed Levels”:</strong> Each group gets people with higher and lower levels and is about equally strong on average.</li>
+        <li><strong>“Similar Levels”:</strong> People with similar levels are grouped together.</li>
+      </ul>
+      <p class="muted">If everyone present has the same level, GroupMix points this out: The grouping will be random.</p>
+
+      <h3>Gender and repeats</h3>
+      <ul>
+        <li><strong>“Balance Gender”:</strong> Male (m) and female (f) are distributed across the groups as evenly as possible. Non-binary (x) and not specified don’t count. You can combine this switch with any composition.</li>
+        <li><strong>“Avoid Repeats”:</strong> People who were together in the last three saved groupings are kept apart where possible. This only works with saved groupings (see <a href="#history">Last Grouping and History</a>). It has a clear effect with “Random” and only a weak one with the level types.</li>
+      </ul>
+
+      <h3>What takes precedence</h3>
+      <p>Group size always takes precedence. Rules come next, then the composition. GroupMix names anything it can’t fulfill after making the groups (see <a href="#rules">Rules</a>).</p>
+    </section>
+
+    <section id="rules">
+      <h2>Rules: Together or Apart</h2>
+      <p>With rules, you decide who should work together or apart.</p>
+
+      <h3>Create a rule</h3>
+      <ol>
+        <li>On the “Grouping” screen, tap the “Rules” row. On the right it says “None” or the number of active rules.</li>
+        <li>In the overview, tap “+” at the top (in an empty overview, tap “Add Rule”).</li>
+        <li>Under “Type”, choose “Apart” or “Together”. Below it, a note explains what the type means. “Apart” is preselected.</li>
+        <li>Under “People”, check at least two people.</li>
+        <li>Tap the checkmark.</li>
+      </ol>
+      <p>You can also create rules from a person: In the person’s edit form, the “Rules” section lists all rules for this person, for example “Apart from Konrad M.”. “Add Rule” there creates a new rule with this person.</p>
+
+      <h3>Active or inactive</h3>
+      <p>In the “Rules” overview, the rules are listed under “Apart” and “Together”. Use the switch in each row to turn a rule on or off. Inactive rules are ignored when making groups. The rule editor has the same switch under “Active”.</p>
+
+      <h3>Edit and delete rules</h3>
+      <p>Tap “Edit” at the top of the overview. Every row gets a “…” menu with “Edit” and “Delete”; the same menu opens when you touch and hold. The editor also has a red “Delete Rule” button. Deleting always asks first.</p>
+
+      <h3>Conflicts</h3>
+      <p>If active rules contradict each other, for example two people should be together and apart at the same time, GroupMix shows a warning symbol. The editor says “Conflicts with: …”, and the overview says “Conflicting rules: Apart takes precedence over Together.” You can still save.</p>
+
+      <h3>Notices after making groups</h3>
+      <p>If GroupMix couldn’t fulfill a rule, the top of the result says, for example, “1 rule not met”. Only when you tap it does it show which rule is affected, for example “Hedwig L. and Konrad M. should be apart.”, possibly with the reason (“The groups are too small for all the people in this rule.” or “There are fewer groups than people in this rule.”). That way no one reads along in passing. After you move people, GroupMix recalculates the notices.</p>
+      <p class="muted">Rules and the notices about unmet rules are hidden during screen mirroring.</p>
+    </section>
+
+    <section id="adjust-result">
+      <h2>Adjusting the Result</h2>
+
+      <h3>Move people</h3>
+      <ol>
+        <li>In the result, tap “…” at the top and turn on “Move People”. A notice appears above the groups: “Touch and hold a name and drag it to another group.”</li>
+        <li>Touch and hold a name and drag it to another group.</li>
+        <li>Tap “Stop” in the notice (or switch it off in the “…” menu) to leave this mode.</li>
+      </ol>
+      <p>The name is moved, not swapped; group sizes may change. If you release a name outside a group, it jumps back. With VoiceOver, you choose the action “Move to Group …” for each name. Groups that become empty stay available as a drop target and are removed when you save.</p>
+
+      <h3>Undo</h3>
+      <p>At the bottom left of the result, the “Undo” arrow reverses the last change, whether it was a move or “Regroup”. This applies to the result currently shown. On iPad with a keyboard, ⌘Z works too.</p>
+
+      <h3>Save or discard</h3>
+      <ul>
+        <li><strong>“Done”</strong> (top right) saves the grouping shown, including your adjustments, and returns to the course.</li>
+        <li><strong>“Back”</strong> discards the result. If you moved people and haven’t saved, GroupMix asks “Discard changes?”. Confirm with “Discard”.</li>
+        <li><strong>“Regroup”</strong> doesn’t ask, because “Undo” brings back the previous state. Intermediate results from regrouping several times aren’t saved.</li>
+      </ul>
+      <p>Sharing saves the grouping too.</p>
+    </section>
+
+    <section id="show-share">
+      <h2>Showing and Sharing the Result</h2>
+
+      <h3>Mirroring your screen</h3>
+      <p>When you mirror your screen via AirPlay or cable, or record it, GroupMix detects this automatically. There’s nothing to set up. While mirroring:</p>
+      <ul>
+        <li>GroupMix hides level, gender, and rules, as well as the notices about unmet rules. The “Show Level and Gender” switch disappears from the “…” menu.</li>
+        <li>The “Grouping” screen shows only the group size, not the composition.</li>
+        <li>Forms show the notice “Hidden during screen mirroring” instead of their content. It goes away as soon as mirroring ends.</li>
+        <li>Group cards get larger and show only the large colored number in the header. The screen doesn’t lock automatically in the group views.</li>
+      </ul>
+      <p>You can still make groups, regroup, view and adjust the result, and share, among other things.</p>
+      <p class="muted">Only what iOS reports as mirroring is detected. GroupMix can’t detect a document camera pointed at the device.</p>
+
+      <h3>Share as an image</h3>
+      <ol>
+        <li>In the result, tap the share icon at the bottom right and choose “Share as Image”.</li>
+        <li>In the iOS share sheet, choose a destination, for example AirDrop or “Save to Files”. “Save Image” puts the image in Photos.</li>
+      </ol>
+      <p>The image is always landscape 16:9 (PNG) with a light background. At the top, it shows only the course name, below it the group cards with a large colored number and the names. The file name starts with the date, for example “2026-10-27 Groups 8b.png”, so multiple images sort correctly.</p>
+      <p class="muted">The first time, iOS asks whether GroupMix may add images to Photos. GroupMix can’t read your photo library.</p>
+
+      <h3>Share as text</h3>
+      <p>In the share menu, choose “Share as Text”. The text has one line per group:</p>
+<pre>Group 1: Hedwig L., Konrad M., Ottokar T.</pre>
+
+      <h3>What is never shared</h3>
+      <p>Image and text contain only names. Level, gender, and rules never appear in them.</p>
+    </section>
+
+    <section id="history">
+      <h2>Last Grouping and History</h2>
+
+      <h3>Saving groupings</h3>
+      <p>GroupMix saves a grouping when you tap “Done” in the result or share it. Each result creates at most one entry; if you share first and then tap “Done”, the same entry is updated. After you adjust a result, the adjusted version is saved.</p>
+
+      <h3>Open the last grouping</h3>
+      <p>Once a grouping is saved, the “Last Grouping” row with its date appears at the very top of the course. It opens the grouping for viewing and sharing. You can’t edit it. If a person still exists, their current name is shown; otherwise the name at the time of grouping. This is handy when groups stay the same over several lessons.</p>
+
+      <h3>History</h3>
+      <ol>
+        <li>In the course, tap “…” at the top and choose “History”. (The item is dimmed as long as nothing is saved.) In the “Last Grouping” view, you can also reach it via “History” at the bottom left.</li>
+        <li>Entries are organized by day (“Today”, “Yesterday”, then weekday and date). A row shows the time and composition, plus the number of groups and people.</li>
+        <li>Tap a row to view and share the grouping.</li>
+      </ol>
+      <p>GroupMix keeps groupings for 14 days; older ones are deleted automatically. The newest one is always kept.</p>
+
+      <h3>Delete entries</h3>
+      <ol>
+        <li>In History, tap “Edit” at the top.</li>
+        <li>Tap “…” on the row and choose “Delete”. The same menu opens when you touch and hold.</li>
+        <li>Confirm the prompt “Delete grouping?” with “Delete”.</li>
+        <li>Tap “Done” to finish editing.</li>
+      </ol>
+    </section>
+
+    <section id="backup">
+      <h2>Backups and Switching Devices</h2>
+      <p>GroupMix stores everything only on your device, encrypted. The data isn’t included in the iCloud or computer backup. So you create backups yourself. A backup protects your data and moves it to another device, for example from iPhone to iPad.</p>
+
+      <h3>Create a backup</h3>
+      <ol>
+        <li>In the course list, tap “…” at the top and choose “Create Backup”.</li>
+        <li>Enter a password with at least 8 characters twice (in “Password” and “Repeat Password”) and tap the checkmark.</li>
+        <li>Tap “Share” and save the file in Files or send it to your other device via AirDrop.</li>
+      </ol>
+      <p>The backup contains all courses with their people, rules, and grouping history. The file is named, for example, “GroupMix-Backup 2026-10-27”. The password isn’t stored anywhere. Without it, a backup can’t be restored.</p>
+
+      <h3>Import a backup</h3>
+      <ol>
+        <li>Tap the backup file, for example in Files. Or tap “…” at the top of the course list and choose “Import Backup”. On a new device, an empty course list also has an “Import Backup” button.</li>
+        <li>Enter the password.</li>
+        <li>If there are already courses on the device, choose under “Existing Courses”: “Add to Existing” leaves the existing courses unchanged and adds the courses from the backup; courses already on the device are skipped. “Replace” deletes all courses on the device and keeps only the courses from the backup; GroupMix asks first.</li>
+        <li>Tap the checkmark.</li>
+      </ol>
+      <p class="muted">With a wrong password or a damaged file, GroupMix changes nothing.</p>
+
+      <h3>Backup reminder</h3>
+      <p>If your last backup was more than 30 days ago, GroupMix shows a notice at the top of the course list, for example “Last backup 5 weeks ago”. If you have never made a backup, GroupMix counts from when the oldest course was created. “Remind Me Later” hides the notice for 7 days. To turn the reminder off completely, use the “Backup Reminders” switch under “…” in the course list. Above the switch, you can see when your last backup was.</p>
+    </section>
+
+    <section id="end-of-term">
+      <h2>End of a Term</h2>
+      <p>You should keep personal data only as long as necessary. That’s why GroupMix reminds you at the end of a term.</p>
+
+      <h3>The notice</h3>
+      <p>When a term is over, a notice appears at the top of the course list, for example “Term 2025/26 is over”. A school year counts as over from 1 August of the following year. For a term like “Season 2025”, that applies from 1 January 2026. Courses without a term or without a year don’t trigger a notice. “Remind Me Later” hides all notices of this kind for 30 days.</p>
+
+      <h3>Clean up</h3>
+      <ol>
+        <li>Tap “Clean Up” in the notice.</li>
+        <li>Check the “New Term”, for example 2026/27. With “Increment Names”, 8b automatically becomes 9b. Courses without a number at the start keep their name.</li>
+        <li>Under “Carry Over”, check the courses you’re carrying over. At first none is checked. If the new name already exists in the new term, GroupMix warns you.</li>
+        <li>Choose “Move Checked Courses” (the button shows the number and term, for example “Move 2 courses to 2026/27”). The courses are moved, not copied; people, rules, settings, last grouping, and history are kept.</li>
+        <li>Delete the remaining courses with “Delete Remaining 2 Courses” (the number matches the remaining courses). If you don’t want to carry anything over, the button reads “Delete Term”. Both buttons appear when nothing is checked, and ask first.</li>
+        <li>Close the sheet with the X. Moving and deleting take effect immediately.</li>
+      </ol>
+      <p class="muted">Deleted courses can only be restored from a backup. If you’re unsure, create a backup first.</p>
+      <p>If you want to copy a single course for the new term and keep the old one, use “Copy for New Term” (see <a href="#getting-started">Getting Started</a>).</p>
+    </section>
+  </main>
+  <footer>
+    <a href="/groupmix/en/">Home</a><a href="/groupmix/en/privacy/">Privacy</a><a href="mailto:flywizardapps@icloud.com">Contact</a>
+  </footer>
+</body>
+</html>
