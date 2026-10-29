@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>GroupMix – Anleitung</title>
-  <meta name="description" content="Anleitung für GroupMix: Kurse und Personen anlegen, Gruppen bilden, Regeln, Ergebnis anpassen und teilen, Backup und Ende des Zeitraums.">
+  <meta name="description" content="Anleitung für GroupMix: Kurse und Personen anlegen, Gruppen bilden, Regeln, Ergebnis anpassen und teilen, Zufallsauswahl, Backup und Ende des Zeitraums.">
   <link rel="stylesheet" href="/groupmix/style.css">
   <link rel="alternate" hreflang="en" href="/groupmix/en/guide/">
 </head>
@@ -15,7 +15,7 @@
   </header>
   <main>
     <h1>Anleitung</h1>
-    <p class="lead">So bildest du mit GroupMix Gruppen: vom ersten Kurs bis zum Backup und zum Aufräumen am Ende des Zeitraums.</p>
+    <p class="lead">So bildest du mit GroupMix Gruppen und wählst Personen zufällig aus: vom ersten Kurs bis zum Backup und zum Aufräumen am Ende des Zeitraums.</p>
 
     <nav class="toc" aria-label="Inhalt">
       <strong>Inhalt</strong>
@@ -27,6 +27,7 @@
         <li><a href="#ergebnis-anpassen">Ergebnis anpassen</a></li>
         <li><a href="#zeigen-teilen">Ergebnis zeigen und teilen</a></li>
         <li><a href="#verlauf">Letzte Einteilung und Verlauf</a></li>
+        <li><a href="#zufallsauswahl">Zufallsauswahl</a></li>
         <li><a href="#backup">Backup und Gerätewechsel</a></li>
         <li><a href="#zeitraum-ende">Ende des Zeitraums</a></li>
       </ol>
@@ -57,6 +58,10 @@
         <li><strong>Kopie für neuen Zeitraum</strong> legt eine Kopie an, der alte Kurs bleibt unverändert. Name und Zeitraum werden vorgeschlagen (aus 8b wird 9b). Übernommen werden die Personen mit Gender und Niveau (alle anwesend) und die Regeln, nicht aber gespeicherte Einteilungen.</li>
       </ul>
       <p class="muted">Auf dem iPad mit Seitenleiste steht „Kurse bearbeiten“ im „…“-Menü der Kursliste.</p>
+
+      <h3>Zurück in die App</h3>
+      <p>Kommst du nach einer kurzen Pause zu GroupMix zurück, geht es im zuletzt geöffneten Kurs weiter. Nach mehr als 20 Minuten zeigt GroupMix wieder die Kursliste. So erscheint am Beamer nicht versehentlich die Klasse der vorigen Stunde.</p>
+      <p class="muted">Auf dem iPad stehen die Knöpfe der unteren Leiste, zum Beispiel „Rückgängig“ und „Teilen“, direkt neben der Hauptaktion statt am Rand. Wo die Anleitung „unten links“ oder „unten rechts“ sagt, gilt das für das iPhone.</p>
     </section>
 
     <section id="personen">
@@ -101,7 +106,7 @@ Ottokar T.</pre>
       <h3>Aus CSV-Datei importieren</h3>
       <ol>
         <li>Die Liste als CSV-Datei bereitstellen. Eine Tabelle aus Excel oder Numbers exportierst du vorher als CSV; andere Formate wie .xlsx liest GroupMix nicht.</li>
-        <li>Im Kurs auf „+“ tippen und „Aus Datei importieren“ wählen. Das Blatt erklärt zuerst den „Aufbau der Datei“.</li>
+        <li>Im Kurs auf „+“ tippen und „Aus Datei importieren“ wählen. Das Blatt erklärt zuerst den „Aufbau der Datei“. Am einfachsten ist die Vorlage: „Vorlage teilen …“ gibt dir die Datei „GroupMix-Vorlage.csv“, die du in Numbers oder Excel ausfüllst und als CSV exportierst.</li>
         <li>„CSV-Datei auswählen …“ antippen und die Datei wählen. Mit „Andere CSV-Datei auswählen …“ wechselst du die Datei.</li>
         <li>Die Vorschau prüfen. Unter der Dateizeile steht, welche Spalten nicht übernommen werden („Nicht übernommen: …“).</li>
         <li>Auf den Haken tippen.</li>
@@ -154,7 +159,7 @@ Konrad;Maurer;m;</pre>
       <p class="muted">Jede Zeile zeigt das konkrete Ergebnis, sodass du direkt vergleichen kannst.</p>
 
       <h3>Zusammensetzung</h3>
-      <p>Unter „Zusammensetzung“ wählst du genau eine Art:</p>
+      <p>Unter „Zusammensetzung“ wählst du im Menü „Niveau“ genau eine Art. Darunter steht, was sie bedeutet:</p>
       <ul>
         <li><strong>„Zufällig“:</strong> Alle werden zufällig auf die Gruppen verteilt.</li>
         <li><strong>„Gemischtes Niveau“:</strong> Jede Gruppe bekommt Personen mit höherem und niedrigerem Niveau und ist im Mittel etwa gleich stark.</li>
@@ -233,20 +238,21 @@ Konrad;Maurer;m;</pre>
         <li>zeigt der Bildschirm „Einteilung“ nur die Gruppengröße, nicht die Zusammensetzung.</li>
         <li>zeigen Formulare statt ihres Inhalts den Hinweis „Während der Bildschirmübertragung ausgeblendet“. Er verschwindet, sobald die Übertragung endet.</li>
         <li>werden die Gruppenkarten größer und zeigen im Kopf nur die große farbige Nummer. Der Bildschirm sperrt sich in den Gruppenansichten nicht automatisch.</li>
+        <li>zeigt die <a href="#zufallsauswahl">Zufallsauswahl</a> den Namen größer, und auch dort sperrt sich der Bildschirm nicht.</li>
       </ul>
       <p>Weiter möglich sind unter anderem Einteilen, Neu einteilen, Ergebnis ansehen und anpassen sowie Teilen.</p>
       <p class="muted">Erkannt wird nur, was iOS als Übertragung meldet. Eine Dokumentenkamera, die auf das Gerät gerichtet ist, erkennt GroupMix nicht.</p>
 
       <h3>Als Bild teilen</h3>
       <ol>
-        <li>Im Ergebnis unten rechts auf das Teilen-Symbol tippen und „Als Bild teilen“ wählen.</li>
+        <li>Im Ergebnis unten rechts auf „Teilen“ tippen und „Als Bild teilen“ wählen.</li>
         <li>Im Teilen-Menü von iOS das Ziel wählen, zum Beispiel AirDrop oder „In Dateien sichern“. Mit „Bild sichern“ landet das Bild in „Fotos“.</li>
       </ol>
       <p>Das Bild ist immer im Querformat 16:9 (PNG) mit hellem Hintergrund. Oben steht nur der Kursname, darunter die Gruppenkarten mit großer farbiger Nummer und den Namen. Der Dateiname beginnt mit dem Datum, zum Beispiel „2026-10-27 Gruppen 8b.png“, damit mehrere Bilder richtig sortiert sind.</p>
       <p class="muted">Beim ersten Mal fragt iOS, ob GroupMix Bilder zu „Fotos“ hinzufügen darf. GroupMix kann deine Fotomediathek nicht lesen.</p>
 
       <h3>Als Text teilen</h3>
-      <p>Im Teilen-Menü „Als Text teilen“ wählen. Der Text hat eine Zeile pro Gruppe:</p>
+      <p>Nach dem Tippen auf „Teilen“ „Als Text teilen“ wählen. Der Text hat eine Zeile pro Gruppe:</p>
 <pre>Gruppe 1: Hedwig L., Konrad M., Ottokar T.</pre>
 
       <h3>Was nie geteilt wird</h3>
@@ -279,6 +285,31 @@ Konrad;Maurer;m;</pre>
       </ol>
     </section>
 
+    <section id="zufallsauswahl">
+      <h2>Zufallsauswahl</h2>
+      <p>Mit der Zufallsauswahl bestimmst du, wer dran ist, zum Beispiel für eine Antwort oder an der Tafel. Gezogen wird nur unter den Anwesenden.</p>
+
+      <h3>Person ziehen</h3>
+      <ol>
+        <li>Öffne den Kurs und prüfe unter „Anwesenheit heute“, wer da ist.</li>
+        <li>Unten links neben „Gruppen bilden“ auf den Würfel tippen. Der Bildschirm „Zufallsauswahl“ öffnet sich.</li>
+        <li>Auf „Ziehen“ tippen. Kurz laufen Namen durch, dann steht unter „Dran ist“ der gezogene Name.</li>
+        <li>Mit „Ziehen“ kommt die nächste Person dran.</li>
+      </ol>
+      <p class="muted">Ist niemand anwesend, ist der Würfel ausgegraut. Ist in den Bedienungshilfen „Bewegung reduzieren“ eingeschaltet, erscheint der Name sofort.</p>
+
+      <h3>Jede Person einmal</h3>
+      <p>Im „…“-Menü oben rechts ist „Wiederholungen vermeiden“ standardmäßig eingeschaltet. Dann kommt jede Person einmal dran, bevor eine neue Runde beginnt. Unter dem Namen steht, wie viele schon dran waren, zum Beispiel „3 von 25 waren schon dran“. Sind alle durch, steht dort „Alle 25 waren dran. Beim nächsten Ziehen beginnt eine neue Runde.“</p>
+      <ul>
+        <li>Der Stand gilt pro Kurs und bleibt über mehrere Stunden erhalten, bis alle dran waren.</li>
+        <li>Wer fehlt und noch nicht dran war, bleibt im Topf und kommt in einer späteren Stunde dran.</li>
+        <li>„Zähler zurücksetzen“ im „…“-Menü beginnt sofort eine neue Runde, in der alle wieder dabei sind.</li>
+        <li>Der Pfeil „Rückgängig“ unten links legt die zuletzt gezogene Person zurück in den Topf, zum Beispiel wenn du aus Versehen gezogen hast.</li>
+      </ul>
+      <p>Ist „Wiederholungen vermeiden“ ausgeschaltet, wird jedes Mal unter allen Anwesenden gezogen, und dieselbe Person kann gleich wieder dran sein. Zähler und „Rückgängig“ gibt es dann nicht.</p>
+      <p class="muted">Die Zufallsauswahl zeigt nur Namen, nie Niveau oder Gender.</p>
+    </section>
+
     <section id="backup">
       <h2>Backup und Gerätewechsel</h2>
       <p>GroupMix speichert alles nur auf deinem Gerät, verschlüsselt. Die Daten sind nicht im iCloud- oder Computer-Backup enthalten. Ein Backup erstellst du deshalb selbst. Damit sicherst du deine Daten und überträgst sie auf ein anderes Gerät, zum Beispiel vom iPhone auf das iPad.</p>
@@ -289,7 +320,7 @@ Konrad;Maurer;m;</pre>
         <li>Ein Passwort mit mindestens 8 Zeichen zweimal eingeben (bei „Passwort“ und „Passwort wiederholen“) und auf den Haken tippen.</li>
         <li>Auf „Teilen“ tippen und die Datei in „Dateien“ sichern oder per AirDrop an dein anderes Gerät senden.</li>
       </ol>
-      <p>Das Backup enthält alle Kurse mit Personen, Regeln und dem Verlauf der Einteilungen. Die Datei heißt zum Beispiel „GroupMix-Backup 2026-10-27“. Das Passwort wird nirgends gespeichert. Ohne Passwort lässt sich ein Backup nicht wiederherstellen.</p>
+      <p>Das Backup enthält alle Kurse mit Personen, Regeln und dem Verlauf der Einteilungen. Nicht enthalten ist, wer bei der Zufallsauswahl schon dran war; nach dem Import beginnt dort eine neue Runde. Die Datei heißt zum Beispiel „GroupMix-Backup 2026-10-27“. Das Passwort wird nirgends gespeichert. Ohne Passwort lässt sich ein Backup nicht wiederherstellen.</p>
 
       <h3>Backup importieren</h3>
       <ol>

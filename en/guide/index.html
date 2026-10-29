@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>GroupMix – Guide</title>
-  <meta name="description" content="Guide for GroupMix: set up courses and people, make groups, rules, adjust and share the result, backups, and the end of a term.">
+  <meta name="description" content="Guide for GroupMix: set up courses and people, make groups, rules, adjust and share the result, random pick, backups, and the end of a term.">
   <link rel="stylesheet" href="/groupmix/style.css">
   <link rel="alternate" hreflang="de" href="/groupmix/anleitung/">
 </head>
@@ -15,7 +15,7 @@
   </header>
   <main>
     <h1>Guide</h1>
-    <p class="lead">How to make groups with GroupMix: from your first course to backups and cleaning up at the end of a term.</p>
+    <p class="lead">How to make groups and pick people at random with GroupMix: from your first course to backups and cleaning up at the end of a term.</p>
 
     <nav class="toc" aria-label="Contents">
       <strong>Contents</strong>
@@ -27,6 +27,7 @@
         <li><a href="#adjust-result">Adjusting the Result</a></li>
         <li><a href="#show-share">Showing and Sharing the Result</a></li>
         <li><a href="#history">Last Grouping and History</a></li>
+        <li><a href="#random-pick">Random Pick</a></li>
         <li><a href="#backup">Backups and Switching Devices</a></li>
         <li><a href="#end-of-term">End of a Term</a></li>
       </ol>
@@ -57,6 +58,10 @@
         <li><strong>Copy for New Term</strong> creates a copy; the old course stays unchanged. Name and term are suggested (8b becomes 9b). The people are copied with gender and level (all marked present), and so are the rules, but saved groupings are not.</li>
       </ul>
       <p class="muted">On iPad with the sidebar, “Edit Courses” is in the “…” menu of the course list.</p>
+
+      <h3>Coming back to the app</h3>
+      <p>If you come back to GroupMix after a short break, you continue in the course you last opened. After more than 20 minutes, GroupMix shows the course list again. That way the class from the previous lesson doesn’t show up on the projector by accident.</p>
+      <p class="muted">On iPad, the buttons in the bottom bar, such as “Undo” and “Share”, sit right next to the main action instead of at the edge. Where this guide says “bottom left” or “bottom right”, that refers to iPhone.</p>
     </section>
 
     <section id="people">
@@ -101,7 +106,7 @@ Ottokar T.</pre>
       <h3>Import from a CSV file</h3>
       <ol>
         <li>Have the list ready as a CSV file. Export a spreadsheet from Excel or Numbers as CSV first; GroupMix doesn’t read other formats such as .xlsx.</li>
-        <li>In the course, tap “+” and choose “Import from File”. The sheet first explains the “File Format”.</li>
+        <li>In the course, tap “+” and choose “Import from File”. The sheet first explains the “File Format”. The easiest way is the template: “Share Template …” gives you the file “GroupMix Template.csv”, which you fill in with Numbers or Excel and export as CSV.</li>
         <li>Tap “Choose CSV File…” and select the file. “Choose Another CSV File…” switches to a different file.</li>
         <li>Check the preview. Below the file row, it says which columns are not imported (“Not imported: …”).</li>
         <li>Tap the checkmark.</li>
@@ -154,7 +159,7 @@ Konrad;Maurer;m;</pre>
       <p class="muted">Each row shows the concrete result, so you can compare directly.</p>
 
       <h3>Composition</h3>
-      <p>Under “Composition”, you choose exactly one type:</p>
+      <p>Under “Composition”, you choose exactly one type in the “Level” menu. Below it, you see what it means:</p>
       <ul>
         <li><strong>“Random”:</strong> Everyone is randomly assigned to groups.</li>
         <li><strong>“Mixed Levels”:</strong> Each group gets people with higher and lower levels and is about equally strong on average.</li>
@@ -233,20 +238,21 @@ Konrad;Maurer;m;</pre>
         <li>The “Grouping” screen shows only the group size, not the composition.</li>
         <li>Forms show the notice “Hidden during screen mirroring” instead of their content. It goes away as soon as mirroring ends.</li>
         <li>Group cards get larger and show only the large colored number in the header. The screen doesn’t lock automatically in the group views.</li>
+        <li><a href="#random-pick">Random Pick</a> shows the name larger, and the screen doesn’t lock there either.</li>
       </ul>
       <p>You can still make groups, regroup, view and adjust the result, and share, among other things.</p>
       <p class="muted">Only what iOS reports as mirroring is detected. GroupMix can’t detect a document camera pointed at the device.</p>
 
       <h3>Share as an image</h3>
       <ol>
-        <li>In the result, tap the share icon at the bottom right and choose “Share as Image”.</li>
+        <li>In the result, tap “Share” at the bottom right and choose “Share as Image”.</li>
         <li>In the iOS share sheet, choose a destination, for example AirDrop or “Save to Files”. “Save Image” puts the image in Photos.</li>
       </ol>
       <p>The image is always landscape 16:9 (PNG) with a light background. At the top, it shows only the course name, below it the group cards with a large colored number and the names. The file name starts with the date, for example “2026-10-27 Groups 8b.png”, so multiple images sort correctly.</p>
       <p class="muted">The first time, iOS asks whether GroupMix may add images to Photos. GroupMix can’t read your photo library.</p>
 
       <h3>Share as text</h3>
-      <p>In the share menu, choose “Share as Text”. The text has one line per group:</p>
+      <p>After tapping “Share”, choose “Share as Text”. The text has one line per group:</p>
 <pre>Group 1: Hedwig L., Konrad M., Ottokar T.</pre>
 
       <h3>What is never shared</h3>
@@ -279,6 +285,31 @@ Konrad;Maurer;m;</pre>
       </ol>
     </section>
 
+    <section id="random-pick">
+      <h2>Random Pick</h2>
+      <p>Random Pick decides whose turn it is, for example to answer a question or come to the board. Only people who are present are picked.</p>
+
+      <h3>Pick someone</h3>
+      <ol>
+        <li>Open the course and check under “Present Today” who’s there.</li>
+        <li>At the bottom left, next to “Make Groups”, tap the die. The “Random Pick” screen opens.</li>
+        <li>Tap “Pick”. Names flicker by briefly, then the picked name appears under “Picked”.</li>
+        <li>Tap “Pick” again for the next person.</li>
+      </ol>
+      <p class="muted">If nobody is present, the die is dimmed. If “Reduce Motion” is turned on in Accessibility, the name appears right away.</p>
+
+      <h3>Everyone once</h3>
+      <p>In the “…” menu at the top right, “Avoid Repeats” is on by default. Everyone then gets one turn before a new round starts. Below the name, you see how many have had a turn, for example “3 of 25 have had a turn”. Once everyone has had a turn, it says “All 25 have had a turn. The next pick starts a new round.”</p>
+      <ul>
+        <li>The count is kept per course and carries over across lessons until everyone has had a turn.</li>
+        <li>People who are absent and haven’t had a turn yet stay in the pool and get their turn in a later lesson.</li>
+        <li>“Reset Count” in the “…” menu starts a new round right away, with everyone back in.</li>
+        <li>The “Undo” arrow at the bottom left puts the last person picked back into the pool, for example if you picked by accident.</li>
+      </ul>
+      <p>With “Avoid Repeats” turned off, every pick is from everyone present, and the same person can come up again right away. There’s no count and no “Undo” then.</p>
+      <p class="muted">Random Pick only shows names, never level or gender.</p>
+    </section>
+
     <section id="backup">
       <h2>Backups and Switching Devices</h2>
       <p>GroupMix stores everything only on your device, encrypted. The data isn’t included in the iCloud or computer backup. So you create backups yourself. A backup protects your data and moves it to another device, for example from iPhone to iPad.</p>
@@ -289,7 +320,7 @@ Konrad;Maurer;m;</pre>
         <li>Enter a password with at least 8 characters twice (in “Password” and “Repeat Password”) and tap the checkmark.</li>
         <li>Tap “Share” and save the file in Files or send it to your other device via AirDrop.</li>
       </ol>
-      <p>The backup contains all courses with their people, rules, and grouping history. The file is named, for example, “GroupMix-Backup 2026-10-27”. The password isn’t stored anywhere. Without it, a backup can’t be restored.</p>
+      <p>The backup contains all courses with their people, rules, and grouping history. It doesn’t include who has had a turn in Random Pick; after importing, a new round starts there. The file is named, for example, “GroupMix-Backup 2026-10-27”. The password isn’t stored anywhere. Without it, a backup can’t be restored.</p>
 
       <h3>Import a backup</h3>
       <ol>
