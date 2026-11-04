@@ -192,6 +192,7 @@ Konrad;Maurer;m;</pre>
         <li>Auf den Haken tippen.</li>
       </ol>
       <p>Du kannst Regeln auch bei einer Person anlegen: Im Bearbeiten-Formular der Person zeigt der Abschnitt „Regeln“ alle Regeln dieser Person, zum Beispiel „Getrennt von Konrad M.“. Mit „Regel hinzufügen“ legst du dort eine neue Regel mit dieser Person an.</p>
+      <p>Auch aus dem Ergebnis heraus kannst du eine Regel anlegen, indem du die Namen direkt auf den Gruppenkarten antippst (siehe <a href="#regel-aus-ergebnis">Regel aus dem Ergebnis anlegen</a>).</p>
 
       <h3>Aktiv oder inaktiv</h3>
       <p>In der Übersicht „Regeln“ stehen die Regeln unter „Getrennt“ und „Zusammen“. Mit dem Schalter in jeder Zeile schaltest du eine Regel an oder aus. Inaktive Regeln werden beim Einteilen nicht berücksichtigt. Im Regel-Editor gibt es denselben Schalter unter „Aktiv“.</p>
@@ -209,7 +210,7 @@ Konrad;Maurer;m;</pre>
 
     <section id="ergebnis-anpassen">
       <h2>Ergebnis anpassen</h2>
-      <p>Weitere Funktionen findest du im Ergebnis oben rechts im „…“-Menü: „Personen verschieben“, „Niveau und Gender zeigen“, „Person je Gruppe ziehen“ und „Gruppe ziehen“ (siehe <a href="#vorstellen">Wer stellt vor?</a>).</p>
+      <p>Weitere Funktionen findest du im Ergebnis oben rechts im „…“-Menü: „Personen verschieben“, „Person hinzufügen“, „Regel anlegen“, „Niveau und Gender zeigen“, „Person je Gruppe ziehen“ und „Gruppe ziehen“ (siehe <a href="#vorstellen">Wer stellt vor?</a>). Verschieben, Person hinzufügen und Regel anlegen gibt es genauso in der letzten Einteilung und im Verlauf (siehe <a href="#einteilung-anpassen">Gespeicherte Einteilung anpassen</a>).</p>
 
       <h3>Personen verschieben</h3>
       <ol>
@@ -219,8 +220,27 @@ Konrad;Maurer;m;</pre>
       </ol>
       <p>Der Name wird verschoben, nicht getauscht; die Gruppengrößen dürfen sich dabei ändern. Lässt du den Namen außerhalb einer Gruppe los, springt er zurück. Mit VoiceOver wählst du pro Name die Aktion „Verschieben nach Gruppe …“. Leer gewordene Gruppen bleiben als Ablageziel stehen und entfallen beim Speichern.</p>
 
+      <h3>Person hinzufügen</h3>
+      <p>Für Personen, die beim Einteilen gefehlt haben oder übersehen wurden, zum Beispiel wer zu spät kommt.</p>
+      <ol>
+        <li>Oben auf „…“ tippen und „Person hinzufügen“ wählen. Die Liste zeigt alle Personen des Kurses, die in dieser Einteilung fehlen.</li>
+        <li>Die Person antippen.</li>
+        <li>Unter „In welche Gruppe?“ die Gruppe antippen. Die Person steht jetzt in dieser Gruppe und ist als anwesend markiert.</li>
+      </ol>
+      <p>Pro Vorgang kommt eine Person dazu. Neue Personen legst du weiterhin im Kurs an. Fehlt niemand, ist der Eintrag ausgegraut.</p>
+
+      <h3 id="regel-aus-ergebnis">Regel aus dem Ergebnis anlegen</h3>
+      <p>Merkst du während der Stunde, dass bestimmte Personen künftig getrennt oder zusammen arbeiten sollten, legst du die Regel direkt hier an.</p>
+      <ol>
+        <li>Oben auf „…“ tippen und „Regel anlegen“ wählen. Über den Gruppen erscheint der Hinweis „Namen antippen, die in Zukunft zusammen oder getrennt arbeiten sollten.“, vor jedem Namen ein Auswahlkreis.</li>
+        <li>Mindestens zwei Namen antippen und auf „Weiter“ tippen. „Abbrechen“ beendet die Auswahl.</li>
+        <li>Der Regel-Editor öffnet sich mit diesen Personen. „Getrennt“ oder „Zusammen“ wählen und auf den Haken tippen.</li>
+      </ol>
+      <p>Die Regel gilt für künftige Einteilungen; die angezeigte Einteilung bleibt, wie sie ist. Verletzt sie die neue Regel, erscheint gleich der Hinweis „1 Regel nicht erfüllt“.</p>
+      <p class="muted">Bei Bildschirmübertragung gibt es „Regel anlegen“ nicht. Beginnt die Übertragung während der Auswahl, wird sie abgebrochen.</p>
+
       <h3>Rückgängig</h3>
-      <p>Unten links im Ergebnis macht der Pfeil „Rückgängig“ die letzte Änderung rückgängig, egal ob es ein Verschieben oder „Neu einteilen“ war. Das gilt für das gerade angezeigte Ergebnis. Auf dem iPad mit Tastatur geht auch ⌘Z.</p>
+      <p>Unten links im Ergebnis macht der Pfeil „Rückgängig“ die letzte Änderung rückgängig, egal ob es ein Verschieben, „Person hinzufügen“ oder „Neu einteilen“ war. Das gilt für das gerade angezeigte Ergebnis. Auf dem iPad mit Tastatur geht auch ⌘Z.</p>
 
       <h3>Speichern oder verwerfen</h3>
       <ul>
@@ -290,13 +310,22 @@ Konrad;Maurer;m;</pre>
       <p>GroupMix speichert eine Einteilung, wenn du im Ergebnis auf „Fertig“ tippst oder sie teilst, außerdem automatisch, wenn du den Bildschirm überträgst oder die App mit offenem Ergebnis verlässt. Pro Ergebnis entsteht höchstens ein Eintrag; teilst du erst und tippst dann auf „Fertig“, wird derselbe Eintrag aktualisiert. Nach einer Anpassung wird der angepasste Stand gespeichert.</p>
 
       <h3>Letzte Einteilung öffnen</h3>
-      <p>Sobald eine Einteilung gespeichert ist, steht ganz oben im Kurs die Zeile „Letzte Einteilung“ mit dem Datum. Sie öffnet die Einteilung zum Ansehen und Teilen. Bearbeiten lässt sie sich nicht. Gibt es eine Person noch, erscheint ihr aktueller Name, sonst der Name zum Zeitpunkt der Einteilung. Das ist praktisch, wenn Gruppen über mehrere Stunden bestehen.</p>
+      <p>Sobald eine Einteilung gespeichert ist, steht ganz oben im Kurs die Zeile „Letzte Einteilung“ mit dem Datum. Sie öffnet die Einteilung zum Ansehen, Teilen und Anpassen. Gibt es eine Person noch, erscheint ihr aktueller Name, sonst der Name zum Zeitpunkt der Einteilung. Das ist praktisch, wenn Gruppen über mehrere Stunden bestehen.</p>
+
+      <h3 id="einteilung-anpassen">Gespeicherte Einteilung anpassen</h3>
+      <p>Auch eine gespeicherte Einteilung lässt sich nachträglich ändern, etwa wenn in der zweiten Stunde jemand fehlt oder dazukommt. Im „…“-Menü gibt es dafür „Personen verschieben“, „Person hinzufügen“ und „Regel anlegen“, bedient wie im <a href="#ergebnis-anpassen">Ergebnis</a>. Dabei gilt:</p>
+      <ul>
+        <li><strong>Verschieben:</strong> „Beenden“ im Hinweis sichert die Änderungen. Gehst du vorher zurück, fragt GroupMix „Verschiebungen sichern?“.</li>
+        <li><strong>Person hinzufügen</strong> sichert sofort, im Verschieben-Modus erst mit „Beenden“.</li>
+        <li>Einen Pfeil „Rückgängig“ gibt es hier nicht; unten links steht „Verlauf“. Eine falsch gezogene Person ziehst du einfach zurück.</li>
+      </ul>
+      <p>Ist die Einteilung von heute, wird sie beim Sichern aktualisiert. Ist sie von einem früheren Tag, entsteht eine neue Einteilung von heute; die alte bleibt unverändert im Verlauf. So berücksichtigt „Wiederholungen vermeiden“ die Gruppen, die wirklich zusammengearbeitet haben.</p>
 
       <h3>Verlauf</h3>
       <ol>
         <li>Im Kurs oben auf „…“ tippen und „Verlauf“ wählen. (Der Eintrag ist ausgegraut, solange nichts gespeichert ist.) In der Ansicht „Letzte Einteilung“ erreichst du den Verlauf auch über „Verlauf“ unten links.</li>
         <li>Die Einträge sind nach Tagen gegliedert („Heute“, „Gestern“, dann Wochentag und Datum). Eine Zeile zeigt Uhrzeit und Zusammensetzung sowie Gruppen- und Personenzahl.</li>
-        <li>Auf eine Zeile tippen, um die Einteilung anzusehen und zu teilen.</li>
+        <li>Auf eine Zeile tippen, um die Einteilung anzusehen, zu teilen und anzupassen.</li>
       </ol>
       <p>GroupMix bewahrt Einteilungen 14 Tage auf; ältere werden automatisch gelöscht. Die neueste bleibt immer erhalten.</p>
 

@@ -192,6 +192,7 @@ Konrad;Maurer;m;</pre>
         <li>Tap the checkmark.</li>
       </ol>
       <p>You can also create rules from a person: In the person’s edit form, the “Rules” section lists all rules for this person, for example “Apart from Konrad M.”. “Add Rule” there creates a new rule with this person.</p>
+      <p>You can also create a rule from the result by tapping the names right on the group cards (see <a href="#rule-from-result">Create a rule from the result</a>).</p>
 
       <h3>Active or inactive</h3>
       <p>In the “Rules” overview, the rules are listed under “Apart” and “Together”. Use the switch in each row to turn a rule on or off. Inactive rules are ignored when making groups. The rule editor has the same switch under “Active”.</p>
@@ -209,7 +210,7 @@ Konrad;Maurer;m;</pre>
 
     <section id="adjust-result">
       <h2>Adjusting the Result</h2>
-      <p>More features are in the “…” menu at the top right of the result: “Move People”, “Show Level and Gender”, “Pick One per Group”, and “Pick a Group” (see <a href="#presenting">Who Presents?</a>).</p>
+      <p>More features are in the “…” menu at the top right of the result: “Move People”, “Add Person”, “Create Rule”, “Show Level and Gender”, “Pick One per Group”, and “Pick a Group” (see <a href="#presenting">Who Presents?</a>). Moving people, adding a person, and creating a rule work the same way in the last grouping and the history (see <a href="#adjust-saved">Adjust a saved grouping</a>).</p>
 
       <h3>Move people</h3>
       <ol>
@@ -219,8 +220,27 @@ Konrad;Maurer;m;</pre>
       </ol>
       <p>The name is moved, not swapped; group sizes may change. If you release a name outside a group, it jumps back. With VoiceOver, you choose the action “Move to Group …” for each name. Groups that become empty stay available as a drop target and are removed when you save.</p>
 
+      <h3>Add a person</h3>
+      <p>For people who were missing or overlooked when you made the groups, for example someone who arrives late.</p>
+      <ol>
+        <li>Tap “…” at the top and choose “Add Person”. The list shows everyone in the course who is missing from this grouping.</li>
+        <li>Tap the person.</li>
+        <li>Under “Which Group?”, tap the group. The person is now in that group and marked as present.</li>
+      </ol>
+      <p>You add one person at a time. New people are still added in the course. If no one is missing, the item is dimmed.</p>
+
+      <h3 id="rule-from-result">Create a rule from the result</h3>
+      <p>If you notice during the lesson that certain people should work apart or together in the future, create the rule right here.</p>
+      <ol>
+        <li>Tap “…” at the top and choose “Create Rule”. A notice appears above the groups: “Tap the names of people who should work together or apart in the future.”, and each name gets a selection circle.</li>
+        <li>Tap at least two names, then tap “Continue”. “Cancel” ends the selection.</li>
+        <li>The rule editor opens with these people. Choose “Apart” or “Together” and tap the checkmark.</li>
+      </ol>
+      <p>The rule applies to future groupings; the grouping shown stays as it is. If it breaks the new rule, the notice “1 rule not met” appears right away.</p>
+      <p class="muted">“Create Rule” isn’t available while you mirror your screen. If mirroring starts during the selection, the selection ends.</p>
+
       <h3>Undo</h3>
-      <p>At the bottom left of the result, the “Undo” arrow reverses the last change, whether it was a move or “Regroup”. This applies to the result currently shown. On iPad with a keyboard, ⌘Z works too.</p>
+      <p>At the bottom left of the result, the “Undo” arrow reverses the last change, whether it was a move, “Add Person”, or “Regroup”. This applies to the result currently shown. On iPad with a keyboard, ⌘Z works too.</p>
 
       <h3>Save or discard</h3>
       <ul>
@@ -290,13 +310,22 @@ Konrad;Maurer;m;</pre>
       <p>GroupMix saves a grouping when you tap “Done” in the result or share it, and automatically when you mirror your screen or leave the app while the result is open. Each result creates at most one entry; if you share first and then tap “Done”, the same entry is updated. After you adjust a result, the adjusted version is saved.</p>
 
       <h3>Open the last grouping</h3>
-      <p>Once a grouping is saved, the “Last Grouping” row with its date appears at the very top of the course. It opens the grouping for viewing and sharing. You can’t edit it. If a person still exists, their current name is shown; otherwise the name at the time of grouping. This is handy when groups stay the same over several lessons.</p>
+      <p>Once a grouping is saved, the “Last Grouping” row with its date appears at the very top of the course. It opens the grouping for viewing, sharing, and adjusting. If a person still exists, their current name is shown; otherwise the name at the time of grouping. This is handy when groups stay the same over several lessons.</p>
+
+      <h3 id="adjust-saved">Adjust a saved grouping</h3>
+      <p>You can change a saved grouping later, for example when someone is missing or joins in the second lesson. The “…” menu offers “Move People”, “Add Person”, and “Create Rule”, used just like in the <a href="#adjust-result">result</a>. Note:</p>
+      <ul>
+        <li><strong>Moving people:</strong> “Stop” in the notice saves your changes. If you go back before that, GroupMix asks “Save your changes?”.</li>
+        <li><strong>Add Person</strong> saves right away; while moving people, it saves when you tap “Stop”.</li>
+        <li>There’s no “Undo” arrow here; “History” is at the bottom left. If you moved someone by mistake, just drag them back.</li>
+      </ul>
+      <p>If the grouping is from today, saving updates it. If it’s from an earlier day, saving creates a new grouping for today, and the old one stays unchanged in the history. That way, “Avoid Repeats” counts the groups that actually worked together.</p>
 
       <h3>History</h3>
       <ol>
         <li>In the course, tap “…” at the top and choose “History”. (The item is dimmed as long as nothing is saved.) In the “Last Grouping” view, you can also reach it via “History” at the bottom left.</li>
         <li>Entries are organized by day (“Today”, “Yesterday”, then weekday and date). A row shows the time and composition, plus the number of groups and people.</li>
-        <li>Tap a row to view and share the grouping.</li>
+        <li>Tap a row to view, share, and adjust the grouping.</li>
       </ol>
       <p>GroupMix keeps groupings for 14 days; older ones are deleted automatically. The newest one is always kept.</p>
 
