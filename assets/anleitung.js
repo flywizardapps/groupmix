@@ -3,13 +3,33 @@
 (function () {
   'use strict';
   var root = document.documentElement;
+
+  /* Feste Texte je Sprache (nach <html lang>) */
+  var STR = {
+    de: {
+      overviewId: 'uebersicht', title: 'Anleitung', suffix: ' – GroupMix', overview: 'Übersicht', find: 'Suchen',
+      searchLabel: 'Anleitung durchsuchen', placeholder: 'Suchen', sideLabel: 'Inhalt der Anleitung', crumbsLabel: 'Brotkrumen',
+      moreLabel: 'Weitere Artikel', prev: 'Vorheriger Artikel', next: 'Nächster Artikel',
+      none: 'Keine Treffer', tip: 'Tipp: Versuche ein kürzeres oder allgemeineres Wort, zum Beispiel „Backup“ oder „Regel“.',
+      count: function (n) { return n + ' Treffer'; }
+    },
+    en: {
+      overviewId: 'overview', title: 'Guide', suffix: ' – GroupMix', overview: 'Overview', find: 'Search',
+      searchLabel: 'Search the guide', placeholder: 'Search', sideLabel: 'Guide contents', crumbsLabel: 'Breadcrumb',
+      moreLabel: 'More articles', prev: 'Previous', next: 'Next',
+      none: 'No results', tip: 'Tip: Try a shorter or more general word, for example “backup” or “rule”.',
+      count: function (n) { return n === 1 ? '1 result' : n + ' results'; }
+    }
+  };
+  var L = STR[(root.getAttribute('lang') || 'de').slice(0, 2) === 'en' ? 'en' : 'de'];
+
   var content = document.getElementById('g-content');
-  var overview = document.getElementById('uebersicht');
+  var overview = document.getElementById(L.overviewId);
   if (!content || !overview) return;
   if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
 
-  var SUFFIX = ' – GroupMix';
-  var TITLE = 'Anleitung';
+  var SUFFIX = L.suffix;
+  var TITLE = L.title;
 
   /* ---------- Daten ---------- */
   var chapters = [].map.call(content.querySelectorAll('section.chapter'), function (el) {
@@ -105,9 +125,9 @@
       return null;
     }
     if (!res.hits.length) {
-      html = '<div class="g-none"><p><strong>Keine Treffer</strong></p><p>Tipp: Versuche ein kürzeres oder allgemeineres Wort, zum Beispiel „Backup“ oder „Regel“.</p></div>';
+      html = '<div class="g-none"><p><strong>' + L.none + '</strong></p><p>' + L.tip + '</p></div>';
     } else {
-      html = '<p class="g-count" aria-hidden="true">' + res.hits.length + ' Treffer</p><ol>' +
+      html = '<p class="g-count" aria-hidden="true">' + L.count(res.hits.length) + '</p><ol>' +
         res.hits.map(function (h) {
           var a = h.a;
           return '<li><a href="#' + a.id + '"><span class="r-chapter">' + esc(a.chapter.title) + '</span><span class="r-title">' +
@@ -117,7 +137,7 @@
     box.innerHTML = html;
     box.hidden = false;
     box.dataset.terms = res.terms.join(' ');
-    status.textContent = res.hits.length ? res.hits.length + ' Treffer' : 'Keine Treffer';
+    status.textContent = res.hits.length ? L.count(res.hits.length) : L.none;
     return res;
   }
 
@@ -155,13 +175,13 @@
   /* Seitenleiste mit Suche (nur breit sichtbar) */
   var side = document.createElement('nav');
   side.className = 'g-side';
-  side.setAttribute('aria-label', 'Inhalt der Anleitung');
+  side.setAttribute('aria-label', L.sideLabel);
   side.innerHTML =
-    '<form class="g-search" role="search"><label for="g-q2" class="sr-only">Anleitung durchsuchen</label>' +
-    '<input id="g-q2" type="search" placeholder="Suchen" autocomplete="off" autocapitalize="off" spellcheck="false" enterkeyhint="search"></form>' +
+    '<form class="g-search" role="search"><label for="g-q2" class="sr-only">' + L.searchLabel + '</label>' +
+    '<input id="g-q2" type="search" placeholder="' + L.placeholder + '" autocomplete="off" autocapitalize="off" spellcheck="false" enterkeyhint="search"></form>' +
     '<div class="sr-only" id="g-status2" role="status" aria-live="polite"></div>' +
     '<div class="g-results" id="g-results2" hidden></div>' +
-    '<ol class="g-side-list"><li><a href="#uebersicht">Übersicht</a></li>' +
+    '<ol class="g-side-list"><li><a href="#' + L.overviewId + '">' + L.overview + '</a></li>' +
     chapters.map(function (c) {
       return '<li data-chapter="' + c.id + '"><a href="#' + c.id + '">' + esc(c.title) + '</a>' +
         (c.articles.length > 1 ? '<ul>' + c.articles.map(function (a) {
@@ -200,19 +220,19 @@
   articles.forEach(function (a, i) {
     var prev = articles[i - 1], next = articles[i + 1], nav = document.createElement('nav');
     nav.className = 'pager';
-    nav.setAttribute('aria-label', 'Weitere Artikel');
+    nav.setAttribute('aria-label', L.moreLabel);
     nav.innerHTML =
-      (prev ? '<a class="prev" rel="prev" href="#' + prev.id + '"><small>← Vorheriger Artikel</small><span class="p-title">' + esc(prev.title) + '</span></a>' : '') +
-      (next ? '<a class="next" rel="next" href="#' + next.id + '"><small>Nächster Artikel →</small><span class="p-title">' + esc(next.title) + '</span></a>' : '');
+      (prev ? '<a class="prev" rel="prev" href="#' + prev.id + '"><small>← ' + L.prev + '</small><span class="p-title">' + esc(prev.title) + '</span></a>' : '') +
+      (next ? '<a class="next" rel="next" href="#' + next.id + '"><small>' + L.next + ' →</small><span class="p-title">' + esc(next.title) + '</span></a>' : '');
     a.el.appendChild(nav);
   });
 
   /* ---------- Routing ---------- */
   var focusSearch = false;
   function crumbHtml(items) {
-    return '<nav aria-label="Brotkrumen"><ol>' + items.map(function (it) {
+    return '<nav aria-label="' + L.crumbsLabel + '"><ol>' + items.map(function (it) {
       return '<li>' + (it.href ? '<a href="' + it.href + '">' + esc(it.text) + '</a>' : '<span aria-current="page">' + esc(it.text) + '</span>') + '</li>';
-    }).join('') + '</ol></nav><a class="g-find" href="#uebersicht" data-find>Suchen</a>';
+    }).join('') + '</ol></nav><a class="g-find" href="#' + L.overviewId + '" data-find>' + L.find + '</a>';
   }
 
   function setView(view, chapter, article) {
@@ -254,10 +274,10 @@
       crumbs.innerHTML = '';
     } else if (view === 'chapter') {
       heading = chapter.el.querySelector('.chapter-head h2'); ttl = chapter.title + ' – ' + TITLE + SUFFIX;
-      crumbs.innerHTML = crumbHtml([{ text: TITLE, href: '#uebersicht' }, { text: chapter.title }]);
+      crumbs.innerHTML = crumbHtml([{ text: TITLE, href: '#' + L.overviewId }, { text: chapter.title }]);
     } else {
       heading = article.el.querySelector('h2'); ttl = article.title + ' – ' + TITLE + SUFFIX;
-      var items = [{ text: TITLE, href: '#uebersicht' }];
+      var items = [{ text: TITLE, href: '#' + L.overviewId }];
       if (chapter.articles.length > 1) items.push({ text: chapter.title, href: '#' + chapter.id });
       items.push({ text: article.title });
       crumbs.innerHTML = crumbHtml(items);
@@ -298,7 +318,7 @@
     var a = e.target.closest && e.target.closest('a[data-find]');
     if (!a) return;
     focusSearch = true;
-    if (location.hash === '#uebersicht') route(); /* Hash ändert sich nicht, also kein hashchange */
+    if (location.hash === '#' + L.overviewId) route(); /* Hash ändert sich nicht, also kein hashchange */
   });
   window.addEventListener('hashchange', route);
 
