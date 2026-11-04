@@ -116,6 +116,7 @@
     }
     box.innerHTML = html;
     box.hidden = false;
+    box.dataset.terms = res.terms.join(' ');
     status.textContent = res.hits.length ? res.hits.length + ' Treffer' : 'Keine Treffer';
     return res;
   }
@@ -132,7 +133,7 @@
       else if (e.key === 'Enter') {
         e.preventDefault();
         var first = box.querySelector('a');
-        if (first) location.hash = first.getAttribute('href');
+        if (first) { pendingTerms = (box.dataset.terms || '').split(' ').filter(Boolean); location.hash = first.getAttribute('href'); }
       }
     });
     return run;
@@ -179,6 +180,7 @@
 
   /* Kapitellisten (Titel + erster Satz) und Blättern zwischen Artikeln */
   function preview(a) {
+    if (a.el.dataset.summary) return a.el.dataset.summary;
     var p = a.el.querySelector(':scope > p, :scope > ol > li, :scope > ul > li');
     var t = p ? p.textContent.replace(/\s+/g, ' ').trim() : '';
     var m = t.match(/^.*?[.!?](?=\s|$)/);
@@ -227,6 +229,7 @@
   }
 
   var firstRoute = true;
+  var pendingTerms = null; /* Suchbegriffe des zuletzt geöffneten Treffers */
   function route() {
     var id = '';
     try { id = decodeURIComponent(location.hash.slice(1)); } catch (e) { id = ''; }
@@ -264,6 +267,15 @@
     /* ?q= bleibt nur in der Übersicht in der Adresse */
     if (view !== 'overview' && location.search) history.replaceState(null, '', location.pathname + location.hash);
 
+    /* Kommt man aus der Suche, die erste eingeklappte Stelle mit dem Suchbegriff aufklappen. */
+    if (article && !target && pendingTerms) {
+      [].some.call(article.el.querySelectorAll('details'), function (d) {
+        var n = norm(d.textContent).s;
+        if (pendingTerms.every(function (w) { return n.indexOf(w) !== -1; })) { d.open = true; target = d; return true; }
+        return false;
+      });
+    }
+    pendingTerms = null;
     function place() {
       if (target) target.scrollIntoView({ behavior: 'instant', block: 'start' });
       else window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
@@ -281,6 +293,8 @@
   }
 
   document.addEventListener('click', function (e) {
+    var hit = e.target.closest && e.target.closest('.g-results a');
+    if (hit) pendingTerms = (hit.closest('.g-results').dataset.terms || '').split(' ').filter(Boolean);
     var a = e.target.closest && e.target.closest('a[data-find]');
     if (!a) return;
     focusSearch = true;
