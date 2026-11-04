@@ -206,6 +206,7 @@ header nav a[aria-current="page"] { color: var(--text); }
 .guide .tile ul { list-style: none; padding: 0; margin: 0 0 8px; }
 .guide .tile li { margin: 0; }
 .guide .tile li a { display: block; padding: 4px 0; color: var(--accent); }
+.guide .tile .tile-text { color: var(--secondary); margin: 0 0 12px; }
 
 .guide .schnellstart { background: var(--card); border: 1px solid var(--rule); border-top: 4px solid var(--accent); border-radius: 20px; padding: 20px 22px 8px; margin: 16px 0 8px; }
 .guide .schnellstart h2 { border: 0; padding: 0; margin: 0 0 8px; font-size: 1.3rem; }
@@ -332,7 +333,7 @@ header nav a[aria-current="page"] { color: var(--text); }
 }
 
 @media (min-width: 700px) {
-  .guide .g-tiles { grid-template-columns: 1fr 1fr; align-items: start; }
+  .guide .g-tiles { grid-template-columns: 1fr 1fr; align-items: stretch; }
 }
 
 @media (min-width: 1100px) {
