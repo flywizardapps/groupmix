@@ -158,7 +158,7 @@
   side.setAttribute('aria-label', 'Inhalt der Anleitung');
   side.innerHTML =
     '<form class="g-search" role="search"><label for="g-q2" class="sr-only">Anleitung durchsuchen</label>' +
-    '<input id="g-q2" type="search" placeholder="Anleitung durchsuchen" autocomplete="off" autocapitalize="off" spellcheck="false" enterkeyhint="search"></form>' +
+    '<input id="g-q2" type="search" placeholder="Suchen" autocomplete="off" autocapitalize="off" spellcheck="false" enterkeyhint="search"></form>' +
     '<div class="sr-only" id="g-status2" role="status" aria-live="polite"></div>' +
     '<div class="g-results" id="g-results2" hidden></div>' +
     '<ol class="g-side-list"><li><a href="#uebersicht">Übersicht</a></li>' +
