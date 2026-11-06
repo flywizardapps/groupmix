@@ -110,14 +110,14 @@
       <article class="topic" id="getting-started" data-summary="Try the sample course or create your first own course right away." data-chapter="getting-ready">
         <h2 tabindex="-1">Getting Started</h2>
       <h3>Welcome and sample course</h3>
-      <p>When you first open GroupMix, it shows “Welcome to GroupMix” with a short overview. Tap “Continue” to close the introduction. As long as you have no courses yet, you can choose “Try with Sample Course” instead. The “Sample Course” contains fictional people with gender and level and one rule, so you can try out all features. You delete it like any other course.</p>
+      <p>When you first open GroupMix, it shows “Welcome to GroupMix” with a short overview. Tap “Continue” to close the introduction. As long as you have no courses yet, you can choose “Try with Sample Course” instead. The “Sample Course” contains fictional people with gender and level and one rule, so you can try out all features. You delete it like any other course. As long as only the sample course exists, the notice “Ready for your own course?” below it invites you to create your first own course with the “Create Course” button.</p>
       <p>You can open the introduction again later in the course list via “…” and “Introduction”. An empty course list also has a “Create Sample Course” button.</p>
 
       <h3>Create a course</h3>
       <ol>
         <li>In the course list, tap “+” at the top (in an empty list, tap “Create Course”).</li>
         <li>Under “Name”, enter the name of the course, for example 8b.</li>
-        <li>Optionally enter a “Term”, for example 2026/27. It is prefilled with the term of the course you created last. The course list is organized by term; courses without a term appear under “No Term”.</li>
+        <li>Optionally enter a “Term”, for example 2026/27. It is prefilled with the term of the course you created last. If that term is already over, GroupMix counts on in the same style (“WS 2025/26” becomes “WS 2026/27”); if there are no courses yet, it shows the current school year. The course list is organized by term; courses without a term appear under “No Term”.</li>
         <li>Optionally enter a “Description”, for example Mathematics.</li>
         <li>Tap the checkmark to save the course. The X closes the form. If you changed something, GroupMix asks “Discard changes?”.</li>
       </ol>
@@ -401,7 +401,13 @@ Konrad;Maurer;m;</pre>
         <li>A notice appears above the groups: “1 of 4 groups picked”. Tap “Next Group” to pick the next one from those remaining.</li>
         <li>Once every group has had its turn, it says “All 4 groups have had their turn.” “Start Over” begins a new order. “Stop” removes the order.</li>
       </ol>
-      <p>You can combine both. The marks only last while the view is open: they aren’t saved and don’t appear in the shared image or text. “Regroup”, moving people, and “Undo” remove them. In the result, picking saves the grouping, just like sharing.</p>
+      <p>You can combine both. People who aren’t here today are skipped. In the result, picking saves the grouping, just like sharing. The marks don’t appear in the shared image or text.</p>
+      <h3>Presentations over a longer time</h3>
+      <p>GroupMix remembers which groups and people were picked. If you switch to another app in between or open the grouping again later, even in the next lesson, you still see who has had a turn and continue with “Next Group”. The marks stay until you choose “Stop” or “Clear Selection”. Moving people, “Add Person”, and “Undo” keep them; only “Regroup” removes them.</p>
+      <aside class="hinweis wissen">
+        <strong>Good to know</strong>
+        <p>If you make a new grouping in between, for example a quick partner swap, the group picking of the earlier one is kept. You’ll find it in the course under “Group Picking in Progress”.</p>
+      </aside>
       <details class="mehr">
         <summary>Reduce Motion and VoiceOver</summary>
         <p>If “Reduce Motion” is on, the result appears right away. VoiceOver announces who or which group was picked.</p>
@@ -450,7 +456,8 @@ Konrad;Maurer;m;</pre>
 
       <article class="topic" id="last-grouping" data-summary="Reopen the most recently saved grouping, for example in the next lesson." data-chapter="several-lessons">
         <h2 tabindex="-1">Open the Last Grouping</h2>
-      <p>Once a grouping is saved, the “Last Grouping” row with its date appears at the very top of the course. It opens the grouping for viewing, sharing, and adjusting. If a person still exists, their current name is shown; otherwise the name at the time of grouping. This is handy when groups stay the same over several lessons.</p>
+      <p>Once a grouping is saved, the “Last Grouping” row with its date appears at the very top of the course. It opens the grouping for viewing, sharing, and adjusting. If a person still exists, their current name is shown; otherwise the name at the time of grouping. This is handy when groups stay the same over several lessons. People who aren’t here today appear dimmed with a crossed-out person symbol on the cards.</p>
+      <p>If <a href="#presenting">group picking</a> is in progress in the grouping, “Last Grouping” shows, for example, “2 of 4 groups picked” below it. If it’s in progress in an earlier grouping, a “Group Picking in Progress” section with that grouping appears below. Once every group has had its turn or you’ve chosen “Stop”, the notice disappears.</p>
       </article>
 
       <article class="topic" id="adjust-saved" data-summary="Change a saved grouping when someone is missing or joins." data-chapter="several-lessons">
@@ -474,7 +481,7 @@ Konrad;Maurer;m;</pre>
         <li>Entries are organized by day (“Today”, “Yesterday”, then weekday and date). A row shows the time and composition, plus the number of groups and people.</li>
         <li>Tap a row to view, share, and adjust the grouping.</li>
       </ol>
-      <p>GroupMix keeps groupings for 14 days; older ones are deleted automatically. The newest one is always kept.</p>
+      <p>GroupMix keeps groupings for 14 days; older ones are deleted automatically. The newest one is always kept, as is any grouping with group picking in progress. While group picking is in progress in a grouping, its row also shows, for example, “2 of 4 groups picked”.</p>
       <details class="mehr">
         <summary>Delete entries</summary>
         <ol>

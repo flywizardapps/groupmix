@@ -110,14 +110,14 @@
       <article class="topic" id="erste-schritte" data-summary="Mit dem Beispielkurs ausprobieren oder gleich den ersten eigenen Kurs anlegen." data-chapter="vorbereiten">
         <h2 tabindex="-1">Erste Schritte</h2>
       <h3>Willkommen und Beispielkurs</h3>
-      <p>Beim ersten Öffnen zeigt GroupMix „Willkommen bei GroupMix“ mit einem kurzen Überblick. Mit „Weiter“ schließt du die Einführung. Solange es noch keine Kurse gibt, kannst du stattdessen „Mit Beispielkurs ausprobieren“ wählen. Der „Beispielkurs“ enthält fiktive Personen mit Gender und Niveau und eine Regel, damit du alle Funktionen ausprobieren kannst. Du löschst ihn wie jeden anderen Kurs.</p>
+      <p>Beim ersten Öffnen zeigt GroupMix „Willkommen bei GroupMix“ mit einem kurzen Überblick. Mit „Weiter“ schließt du die Einführung. Solange es noch keine Kurse gibt, kannst du stattdessen „Mit Beispielkurs ausprobieren“ wählen. Der „Beispielkurs“ enthält fiktive Personen mit Gender und Niveau und eine Regel, damit du alle Funktionen ausprobieren kannst. Du löschst ihn wie jeden anderen Kurs. Solange nur der Beispielkurs da ist, lädt dich der Hinweis „Bereit für deinen eigenen Kurs?“ darunter mit dem Button „Kurs anlegen“ zum ersten eigenen Kurs ein.</p>
       <p>Die Einführung rufst du später in der Kursliste über „…“ und „Einführung“ wieder auf. In einer leeren Kursliste gibt es außerdem den Button „Beispielkurs anlegen“.</p>
 
       <h3>Kurs anlegen</h3>
       <ol>
         <li>In der Kursliste oben auf „+“ tippen (in einer leeren Liste auf „Kurs anlegen“).</li>
         <li>Unter „Name“ den Namen des Kurses eintragen, zum Beispiel 8b.</li>
-        <li>Optional einen „Zeitraum“ eintragen, zum Beispiel 2026/27. Er ist mit dem Zeitraum des zuletzt angelegten Kurses vorbelegt. Die Kursliste ist nach Zeitraum gegliedert; Kurse ohne Zeitraum stehen unter „Ohne Zeitraum“.</li>
+        <li>Optional einen „Zeitraum“ eintragen, zum Beispiel 2026/27. Er ist mit dem Zeitraum des zuletzt angelegten Kurses vorbelegt. Ist dieser Zeitraum schon vorbei, zählt GroupMix in derselben Schreibweise weiter (aus „WS 2025/26“ wird „WS 2026/27“); gibt es noch keinen Kurs, steht dort das aktuelle Schuljahr. Die Kursliste ist nach Zeitraum gegliedert; Kurse ohne Zeitraum stehen unter „Ohne Zeitraum“.</li>
         <li>Optional eine „Beschreibung“ eintragen, zum Beispiel Mathematik.</li>
         <li>Auf den Haken tippen, um den Kurs zu sichern. Mit dem X schließt du das Formular. Wenn du etwas geändert hast, fragt GroupMix „Änderungen verwerfen?“.</li>
       </ol>
@@ -401,7 +401,13 @@ Konrad;Maurer;m;</pre>
         <li>Über den Gruppen erscheint der Hinweis „1 von 4 Gruppen gezogen“. Mit „Nächste Gruppe“ ziehst du die nächste aus den übrigen.</li>
         <li>Sind alle dran, steht dort „Alle 4 Gruppen waren dran.“ Mit „Von vorn“ beginnt eine neue Reihenfolge. „Beenden“ entfernt die Reihenfolge.</li>
       </ol>
-      <p>Beides lässt sich kombinieren. Die Markierungen gelten nur, solange die Ansicht offen ist: Sie werden nicht gespeichert und erscheinen nicht im geteilten Bild oder Text. „Neu einteilen“, Verschieben und „Rückgängig“ entfernen sie. Im Ergebnis speichert das Ziehen die Einteilung, so wie das Teilen.</p>
+      <p>Beides lässt sich kombinieren. Wer heute nicht da ist, wird übersprungen. Im Ergebnis speichert das Ziehen die Einteilung, so wie das Teilen. Im geteilten Bild oder Text erscheinen die Markierungen nicht.</p>
+      <h3>Präsentationen über längere Zeit</h3>
+      <p>GroupMix merkt sich, welche Gruppen und Personen gezogen wurden. Wechselst du zwischendurch in eine andere App oder öffnest die Einteilung später wieder, auch in der nächsten Stunde, siehst du weiter, wer schon dran war, und machst mit „Nächste Gruppe“ weiter. Die Markierungen bleiben, bis du „Beenden“ bzw. „Auswahl aufheben“ wählst. Verschieben, „Person hinzufügen“ und „Rückgängig“ behalten sie; nur „Neu einteilen“ entfernt sie.</p>
+      <aside class="hinweis wissen">
+        <strong>Gut zu wissen</strong>
+        <p>Machst du zwischendurch eine neue Einteilung, zum Beispiel einen kurzen Partnertausch, bleibt die Gruppenziehung der alten erhalten. Du findest sie im Kurs unter „Gruppenziehung läuft“.</p>
+      </aside>
       <details class="mehr">
         <summary>Bewegung reduzieren und VoiceOver</summary>
         <p>Ist „Bewegung reduzieren“ eingeschaltet, steht das Ergebnis sofort fest. VoiceOver sagt an, wer bzw. welche Gruppe gezogen wurde.</p>
@@ -450,7 +456,8 @@ Konrad;Maurer;m;</pre>
 
       <article class="topic" id="letzte-einteilung" data-summary="Die zuletzt gespeicherte Einteilung wieder öffnen, etwa in der nächsten Stunde." data-chapter="mehrere-stunden">
         <h2 tabindex="-1">Letzte Einteilung öffnen</h2>
-      <p>Sobald eine Einteilung gespeichert ist, steht ganz oben im Kurs die Zeile „Letzte Einteilung“ mit dem Datum. Sie öffnet die Einteilung zum Ansehen, Teilen und Anpassen. Gibt es eine Person noch, erscheint ihr aktueller Name, sonst der Name zum Zeitpunkt der Einteilung. Das ist praktisch, wenn Gruppen über mehrere Stunden bestehen.</p>
+      <p>Sobald eine Einteilung gespeichert ist, steht ganz oben im Kurs die Zeile „Letzte Einteilung“ mit dem Datum. Sie öffnet die Einteilung zum Ansehen, Teilen und Anpassen. Gibt es eine Person noch, erscheint ihr aktueller Name, sonst der Name zum Zeitpunkt der Einteilung. Das ist praktisch, wenn Gruppen über mehrere Stunden bestehen. Wer heute nicht da ist, steht grau mit einem durchgestrichenen Personensymbol auf den Karten.</p>
+      <p>Läuft in der Einteilung gerade eine <a href="#vorstellen">Gruppenziehung</a>, steht unter „Letzte Einteilung“ zum Beispiel „2 von 4 Gruppen gezogen“. Läuft sie in einer älteren Einteilung, erscheint darunter der Bereich „Gruppenziehung läuft“ mit dieser Einteilung. Sind alle Gruppen dran gewesen oder hast du „Beenden“ gewählt, verschwindet der Hinweis.</p>
       </article>
 
       <article class="topic" id="einteilung-anpassen" data-summary="Eine gespeicherte Einteilung ändern, wenn jemand fehlt oder dazukommt." data-chapter="mehrere-stunden">
@@ -474,7 +481,7 @@ Konrad;Maurer;m;</pre>
         <li>Die Einträge sind nach Tagen gegliedert („Heute“, „Gestern“, dann Wochentag und Datum). Eine Zeile zeigt Uhrzeit und Zusammensetzung sowie Gruppen- und Personenzahl.</li>
         <li>Auf eine Zeile tippen, um die Einteilung anzusehen, zu teilen und anzupassen.</li>
       </ol>
-      <p>GroupMix bewahrt Einteilungen 14 Tage auf; ältere werden automatisch gelöscht. Die neueste bleibt immer erhalten.</p>
+      <p>GroupMix bewahrt Einteilungen 14 Tage auf; ältere werden automatisch gelöscht. Die neueste bleibt immer erhalten, ebenso jede mit laufender Gruppenziehung. Läuft in einer Einteilung eine Gruppenziehung, zeigt ihre Zeile zusätzlich zum Beispiel „2 von 4 Gruppen gezogen“.</p>
       <details class="mehr">
         <summary>Einträge löschen</summary>
         <ol>
