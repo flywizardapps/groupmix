@@ -52,6 +52,7 @@
             <li><a href="#people-edit">Edit and Delete People</a></li>
             <li><a href="#rules">Rules: Together or Apart</a></li>
             <li><a href="#language">App Language</a></li>
+            <li><a href="#settings">Settings</a></li>
           </ul>
         </section>
         <section class="tile">
@@ -112,7 +113,7 @@
         <h2 tabindex="-1">Getting Started</h2>
       <h3>Welcome and sample course</h3>
       <p>When you first open GroupMix, it shows “Welcome to GroupMix” with a short overview. Tap “Continue” to close the introduction. As long as you have no courses yet, you can choose “Try with Sample Course” instead. The “Sample Course” contains fictional people with gender and level and one rule, so you can try out all features. You delete it like any other course. As long as only the sample course exists, the notice “Ready for your own course?” below it invites you to create your first own course with the “Create Course” button.</p>
-      <p>You can open the introduction again later in the course list via “…” and “Introduction”. An empty course list also has a “Create Sample Course” button.</p>
+      <p>You can open the introduction again later in <a href="#settings">Settings</a> under “Introduction”. An empty course list also has a “Create Sample Course” button.</p>
 
       <h3>Create a course</h3>
       <ol>
@@ -196,7 +197,7 @@ Konrad;Maurer;m;</pre>
       </details>
       </article>
 
-      <article class="topic" id="level" data-summary="The optional details gender and level, and when they take effect." data-chapter="getting-ready">
+      <article class="topic" id="level" data-summary="The optional details gender and level, when they take effect, and how to keep them up to date." data-chapter="getting-ready">
         <h2 tabindex="-1">Gender and Level</h2>
       <p>Both are optional.</p>
       <ul>
@@ -204,9 +205,13 @@ Konrad;Maurer;m;</pre>
         <li><strong>Level:</strong> Your assessment of the person compared to the course, for example their current attainment. You choose it with one tap on one of five dot steps, from ●○○○○ (“Lower”) to ●●●●● (“Higher”). The five steps are “Low”, “Somewhat low”, “Medium”, “Somewhat high”, and “High”. The default is “Medium”. Level only has an effect with “Mixed Levels” and “Similar Levels”.</li>
       </ul>
       <p>Via “…” and “Show Level and Gender”, you show level and gender in the list of people. They are hidden by default.</p>
+
+      <h3>Check and edit levels</h3>
+      <p>Attainment changes over time. Via “…” and “Edit Levels”, you see everyone in the course with their level. Tap a person’s dots and choose the new step. The checkmark saves your changes; the X discards them and asks first. Use the button with the two arrows to sort the list by name, higher levels first, or lower levels first; GroupMix remembers your choice. Duplicate names are marked with a warning sign.</p>
+      <p>So you don’t forget, GroupMix asks “Are the levels still right?” at the top of the course from time to time. “Check” opens the same list, and tapping the checkmark counts as checked, even if you change nothing. “Remind Me Later” hides the notice for 14 days. The notice only appears in courses where you have set levels (at least one person not on “Medium”), not in the sample course, and no longer once the course’s term is over. GroupMix counts from the last check, or else from when the course was created. In <a href="#settings">Settings</a> under “Reminders”, you choose how often the notice appears, or turn it off.</p>
       <aside class="hinweis datenschutz">
         <strong>Privacy</strong>
-        <p>Level and gender never appear in a shared image or text and are hidden while you mirror your screen.</p>
+        <p>Level and gender never appear in a shared image or text and are hidden while you mirror your screen, as are the level notice and the “Edit Levels” list.</p>
       </aside>
       </article>
 
@@ -251,15 +256,27 @@ Konrad;Maurer;m;</pre>
       <p>GroupMix uses the first of your preferred languages that the app supports. GroupMix is currently available in English, German, French, and Spanish. If the app doesn’t support any of your languages, it appears in English.</p>
       <p>You can also choose a different language for GroupMix than for your device, for example German for a German class:</p>
       <ol>
-        <li>Tap “…” at the top of the course list and choose “Language”. Below it, you see the language GroupMix is currently using.</li>
+        <li>Tap the gear at the top of the course list (on iPad with the sidebar, “…” and “Settings”). Under “App Language”, “Language” shows the language GroupMix is currently using. Tap it.</li>
         <li>Settings opens at GroupMix. Under “Preferred Language”, tap “Language” and choose the language you want.</li>
         <li>Switch back to GroupMix. The app restarts in the new language.</li>
       </ol>
       <p>You can also do this directly in Settings: “Apps” › “GroupMix” › “Language”.</p>
+      <p>iOS only offers the “Language” choice if at least two languages are set up on your device. If only one is set up, GroupMix tells you. Then add another language in Settings under “General” › “Language &amp; Region”, for example German. iOS asks which language your device should use. Keep your current one if you don’t want anything on your device to change.</p>
       <aside class="hinweis wissen">
         <strong>Good to know</strong>
-        <p>Anything you entered yourself stays as it is, for example course names, descriptions, and names. Shared images and texts appear in the chosen language. GroupMix recognizes name lists and CSV files in all of these languages, whichever one is set. Only the abbreviation “m” depends on the language set: In Spanish, it means female (“mujer”). In all languages other than English and German, you can also report a translation issue by email from the “…” menu.</p>
+        <p>Anything you entered yourself stays as it is, for example course names, descriptions, and names. Shared images and texts appear in the chosen language. GroupMix recognizes name lists and CSV files in all of these languages, whichever one is set. Only the abbreviation “m” depends on the language set: In Spanish, it means female (“mujer”). In all languages other than English and German, you can also report a translation issue by email in Settings (“Report a Translation Issue”).</p>
       </aside>
+      </article>
+
+      <article class="topic" id="settings" data-summary="Backup, reminders, language, and help in one place." data-chapter="getting-ready">
+        <h2 tabindex="-1">Settings</h2>
+      <p>Tap the gear at the top of the course list. On iPad with the sidebar, “Settings” is in the “…” menu of the course list; with a keyboard, you can also press ⌘,. Changes take effect right away. Tap the X to close Settings.</p>
+      <ul>
+        <li><strong>Backup:</strong> when your last backup was, plus “Create Backup” and “Import Backup” (see <a href="#backup">Backup</a>).</li>
+        <li><strong>Reminders:</strong> “Backup Reminders” and “Level Reminders”, each with a “Frequency”: every 2 weeks, every month, or every 2, 3, or 6 months. The default is every month for backups and every 3 months for levels (see <a href="#level">Gender and Level</a>). Plus “Clean Up Reminders” for the notice at the end of a term (see <a href="#end-of-term">End of a Term</a>). “Remind Me Later” hides each of these notices for 14 days.</li>
+        <li><strong>App Language:</strong> “Language” and, in languages other than English and German, “Report a Translation Issue” (see <a href="#language">App Language</a>).</li>
+        <li><strong>Help:</strong> “Introduction” and “Guide”.</li>
+      </ul>
       </article>
     </section>
 
@@ -416,6 +433,7 @@ Konrad;Maurer;m;</pre>
       <ol>
         <li>Tap “…” at the top and choose “Pick a Group”. A box runs over the groups and stops at one. It now shows its position, for example “1.”.</li>
         <li>A notice appears above the groups: “1 of 4 groups picked”. Tap “Next Group” to pick the next one from those remaining.</li>
+        <li>Tap “Pick a Person” in the notice to pick who presents in the group just picked. Tap it again to pick anew there. The other groups keep their person.</li>
         <li>Once every group has had its turn, it says “All 4 groups have had their turn.” “Start Over” begins a new order. “Stop” removes the order.</li>
       </ol>
       <p>You can combine both. People who aren’t here today are skipped. In the result, picking saves the grouping, just like sharing. The marks don’t appear in the shared image or text.</p>
@@ -498,7 +516,7 @@ Konrad;Maurer;m;</pre>
         <li>Entries are organized by day (“Today”, “Yesterday”, then weekday and date). A row shows the time and composition, plus the number of groups and people.</li>
         <li>Tap a row to view, share, and adjust the grouping.</li>
       </ol>
-      <p>GroupMix keeps groupings for 14 days; older ones are deleted automatically. The newest one is always kept, as is any grouping with group picking in progress. While group picking is in progress in a grouping, its row also shows, for example, “2 of 4 groups picked”.</p>
+      <p>GroupMix keeps groupings for 14 days; older ones are deleted automatically. The newest one is always kept, as is any grouping with group picking in progress, though only for up to 6 weeks. While group picking is in progress in a grouping, its row also shows, for example, “2 of 4 groups picked”.</p>
       <details class="mehr">
         <summary>Delete entries</summary>
         <ol>
@@ -521,12 +539,13 @@ Konrad;Maurer;m;</pre>
         <h2 tabindex="-1">Mirroring Your Screen</h2>
       <p>When you mirror your screen via AirPlay or cable, or record it, GroupMix detects this automatically. There’s nothing to set up. While mirroring:</p>
       <ul>
-        <li>GroupMix hides level, gender, and rules, as well as the notices about unmet rules. The “Show Level and Gender” switch disappears from the “…” menu.</li>
+        <li>GroupMix hides level, gender, and rules, as well as the notices about unmet rules. The “Show Level and Gender” switch disappears from the “…” menu, as do “Edit Levels” and the notice “Are the levels still right?”. An open “Edit Levels” list is covered.</li>
         <li>The “Grouping” screen shows only the group size, not the composition.</li>
         <li>Forms show the notice “Hidden during screen mirroring” instead of their content. It goes away as soon as mirroring ends.</li>
         <li>Group cards get larger and show only the large colored number in the header. The screen doesn’t lock automatically in the group views.</li>
         <li><a href="#random-pick">Random Pick</a> shows the name larger, and the screen doesn’t lock there either.</li>
       </ul>
+      <p>This also stays hidden in the app switcher: As soon as you leave GroupMix or open Control Center, the app hides level, gender, and rules, and forms show only a crossed-out eye. So nothing of it appears in the preview when you later switch between apps on the projector.</p>
       <p>You can still make groups, regroup, view and adjust the result, and share, among other things.</p>
       <details class="mehr">
         <summary>Document camera</summary>
@@ -554,11 +573,11 @@ Konrad;Maurer;m;</pre>
 
       <h3>Create a backup</h3>
       <ol>
-        <li>In the course list, tap “…” at the top and choose “Create Backup”.</li>
+        <li>In the course list, tap the gear at the top and choose “Create Backup”.</li>
         <li>Enter a password with at least 8 characters twice (in “Password” and “Repeat Password”) and tap the checkmark.</li>
         <li>Tap “Share” and save the file in Files or send it to your other device via AirDrop.</li>
       </ol>
-      <p>The backup contains all courses with their people, rules, and grouping history. It doesn’t include who has had a turn in Random Pick; after importing, a new round starts there. The file is named, for example, “GroupMix-Backup 2026-10-27”.</p>
+      <p>The backup contains all courses with their people, rules, and grouping history, as well as when you last checked the levels. It doesn’t include who has had a turn in Random Pick; after importing, a new round starts there. The file is named, for example, “GroupMix-Backup 2026-10-27”.</p>
       <aside class="hinweis wissen">
         <strong>Good to know</strong>
         <p>The password isn’t stored anywhere. Without it, a backup can’t be restored.</p>
@@ -566,7 +585,7 @@ Konrad;Maurer;m;</pre>
 
       <h3>Import a backup</h3>
       <ol>
-        <li>Tap the backup file, for example in Files. Or tap “…” at the top of the course list and choose “Import Backup”. On a new device, an empty course list also has an “Import Backup” button.</li>
+        <li>Tap the backup file, for example in Files. Or choose “Import Backup” in Settings. On a new device, an empty course list also has an “Import Backup” button.</li>
         <li>Enter the password.</li>
         <li>If there are already courses on the device, choose under “Existing Courses”: “Add to Existing” leaves the existing courses unchanged and adds the courses from the backup; courses already on the device are skipped. “Replace” deletes all courses on the device and keeps only the courses from the backup; GroupMix asks first.</li>
         <li>Tap the checkmark.</li>
@@ -574,7 +593,7 @@ Konrad;Maurer;m;</pre>
       <p class="muted">With a wrong password or a damaged file, GroupMix changes nothing.</p>
 
       <h3>Backup reminder</h3>
-      <p>If your last backup was more than 30 days ago, GroupMix shows a notice at the top of the course list, for example “Last backup 5 weeks ago”. If you have never made a backup, GroupMix counts from when the oldest course was created. “Remind Me Later” hides the notice for 7 days. To turn the reminder off completely, use the “Backup Reminders” switch under “…” in the course list. Above the switch, you can see when your last backup was.</p>
+      <p>If your last backup is older than the chosen frequency (by default every month), GroupMix shows a notice at the top of the course list, for example “Last backup 5 weeks ago”. If you have never made a backup, GroupMix counts from when the oldest course was created. “Remind Me Later” hides the notice for 14 days. In <a href="#settings">Settings</a> under “Reminders”, use “Frequency” to choose how often GroupMix reminds you, or turn “Backup Reminders” off completely. At the top of Settings, you can see when your last backup was.</p>
       </article>
 
       <article class="topic" id="device-switch" data-summary="Move all your courses to another device with a backup." data-chapter="data">
@@ -587,7 +606,7 @@ Konrad;Maurer;m;</pre>
       <p>You should keep personal data only as long as necessary. That’s why GroupMix reminds you at the end of a term.</p>
 
       <h3>The notice</h3>
-      <p>When a term is over, a notice appears at the top of the course list, for example “Term 2025/26 is over”. A school year counts as over from 1 August of the following year. For a term like “Season 2025”, that applies from 1 January 2026. Courses without a term or without a year don’t trigger a notice. “Remind Me Later” hides all notices of this kind for 30 days.</p>
+      <p>When a term is over, a notice appears at the top of the course list, for example “Term 2025/26 is over”. A school year counts as over from 1 August of the following year. For a term like “Season 2025”, that applies from 1 January 2026. Courses without a term or without a year don’t trigger a notice. “Remind Me Later” hides all notices of this kind for 14 days. In <a href="#settings">Settings</a> under “Reminders”, you can turn off “Clean Up Reminders”.</p>
 
       <h3>Clean up</h3>
       <ol>
@@ -641,7 +660,15 @@ Konrad;Maurer;m;</pre>
         </details>
         <details>
           <summary>Can I use GroupMix in a different language?</summary>
-          <div class="answer"><p>Yes. Tap “…” at the top of the course list, then “Language”. In Settings, under “Language”, choose one of the languages GroupMix offers. More under <a href="#language">App Language</a>.</p></div>
+          <div class="answer"><p>Yes. Tap the gear at the top of the course list, then “Language”. In the iOS Settings, under “Language”, choose one of the languages GroupMix offers. If only one language is set up on your device, add a second one first. More under <a href="#language">App Language</a>.</p></div>
+        </details>
+        <details>
+          <summary>Where did Backup and Introduction go?</summary>
+          <div class="answer"><p>Both are now in Settings: the gear at the top of the course list, or on iPad with the sidebar, “…” and “Settings”. More under <a href="#settings">Settings</a>.</p></div>
+        </details>
+        <details>
+          <summary>Can I turn off the reminders?</summary>
+          <div class="answer"><p>Yes. In Settings under “Reminders”, you turn “Backup Reminders”, “Level Reminders”, and “Clean Up Reminders” off individually, or use “Frequency” to choose how often GroupMix reminds you. More under <a href="#settings">Settings</a>.</p></div>
         </details>
         <details>
           <summary>How do I get my data onto a new device?</summary>
