@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>GroupMix – Anleitung</title>
-  <meta name="description" content="Anleitung für GroupMix: Kurse und Personen anlegen, Gruppen bilden, Regeln, Ergebnis anpassen und teilen, Zufallsauswahl, Backup und Ende des Zeitraums.">
+  <meta name="description" content="Anleitung für GroupMix: Kurse und Personen anlegen, Gruppen bilden, manuell einteilen, Gruppenpuzzle, Rollen und Themen, Regeln, Einteilungen anheften, teilen, Zufallsauswahl, Backup und Ende des Zeitraums.">
   <link rel="stylesheet" href="/groupmix/style.css?v=20261104d">
   <link rel="icon" href="/groupmix/assets/groupmix-icon-rounded.svg" type="image/svg+xml">
   <link rel="alternate" hreflang="en" href="/groupmix/en/guide/">
@@ -61,10 +61,13 @@
           <ul>
             <li><a href="#anwesenheit">Anwesenheit</a></li>
             <li><a href="#gruppen-bilden">Gruppen bilden</a></li>
+            <li><a href="#manuell">Gruppen selbst festlegen</a></li>
+            <li><a href="#gruppenpuzzle">Gruppenpuzzle</a></li>
             <li><a href="#hinweise">Hinweise nach der Einteilung</a></li>
             <li><a href="#ergebnis-anpassen">Ergebnis anpassen</a></li>
             <li><a href="#zu-spaet">Jemand kommt zu spät</a></li>
             <li><a href="#regel-aus-ergebnis">Regel aus dem Ergebnis anlegen</a></li>
+            <li><a href="#rollen-themen">Rollen und Themen</a></li>
             <li><a href="#beamer">Am Beamer zeigen und teilen</a></li>
             <li><a href="#vorstellen">Wer stellt vor?</a></li>
             <li><a href="#zufallsauswahl">Zufallsauswahl</a></li>
@@ -76,6 +79,7 @@
             <li><a href="#speichern">Einteilungen speichern</a></li>
             <li><a href="#letzte-einteilung">Letzte Einteilung öffnen</a></li>
             <li><a href="#einteilung-anpassen">Gespeicherte Einteilung anpassen</a></li>
+            <li><a href="#anheften">Einteilungen anheften</a></li>
             <li><a href="#verlauf">Verlauf</a></li>
           </ul>
         </section>
@@ -118,7 +122,7 @@
       <h3>Kurs anlegen</h3>
       <ol>
         <li>In der Kursliste oben auf „+“ tippen.</li>
-        <li>Den Namen eintragen, zum Beispiel 8b, und optional „Zeitraum“ (zum Beispiel 2026/27) und „Beschreibung“ (zum Beispiel Mathematik).</li>
+        <li>Den Namen eintragen, zum Beispiel 8b, und optional „Zeitraum“ (zum Beispiel 2026/27 oder ein Halbjahr wie HT26) und „Beschreibung“ (zum Beispiel Mathematik).</li>
         <li>Auf den Haken tippen.</li>
       </ol>
       <p class="muted">Die Kursliste ist nach Zeitraum gegliedert. Am Ende eines Zeitraums hilft dir GroupMix beim <a href="#zeitraum-ende">Aufräumen</a>.</p>
@@ -223,7 +227,7 @@ Konrad;Maurer;m;</pre>
 
       <article class="topic" id="sprache" data-summary="GroupMix in einer anderen Sprache nutzen als dein Gerät, zum Beispiel auf Englisch." data-chapter="vorbereiten">
         <h2 tabindex="-1">Sprache der App</h2>
-      <p>GroupMix gibt es auf Deutsch, Englisch, Französisch und Spanisch und folgt der Sprache deines Geräts. Du kannst für GroupMix aber auch eine andere Sprache wählen, zum Beispiel Englisch für den Englischunterricht:</p>
+      <p>GroupMix gibt es auf Deutsch, Englisch, Französisch, Spanisch, Niederländisch, Dänisch, Schwedisch und Norwegisch und folgt der Sprache deines Geräts. Du kannst für GroupMix aber auch eine andere Sprache wählen, zum Beispiel Englisch für den Englischunterricht:</p>
       <ol>
         <li>In den <a href="#einstellungen">Einstellungen</a> von GroupMix auf „Sprache“ tippen. Die iOS-Einstellungen öffnen sich.</li>
         <li>Unter „Sprache“ die gewünschte Sprache wählen.</li>
@@ -232,7 +236,7 @@ Konrad;Maurer;m;</pre>
       <p class="muted">Bietet iOS dort keine Auswahl an, ist auf dem Gerät nur eine Sprache eingerichtet. Füge dann in den iOS-Einstellungen unter „Allgemein“ › „Sprache &amp; Region“ eine zweite hinzu und behalte deine bisherige als Gerätesprache.</p>
       <aside class="hinweis wissen">
         <strong>Gut zu wissen</strong>
-        <p>Deine eigenen Eingaben wie Kurs- und Personennamen bleiben unverändert. Namenslisten und CSV-Dateien erkennt GroupMix in allen angebotenen Sprachen. Ist die App auf Spanisch eingestellt, steht „m“ für weiblich („mujer“).</p>
+        <p>Deine eigenen Eingaben wie Kurs- und Personennamen bleiben unverändert. Namenslisten und CSV-Dateien erkennt GroupMix in allen angebotenen Sprachen. Ist die App auf Spanisch eingestellt, steht „m“ für weiblich („mujer“). In den Sprachen außer Deutsch und Englisch findest du in den Einstellungen „Übersetzungsfehler melden“.</p>
       </aside>
       </article>
 
@@ -272,13 +276,13 @@ Konrad;Maurer;m;</pre>
       <article class="topic" id="gruppen-bilden" data-summary="Gruppengröße und Zusammensetzung wählen und einteilen." data-chapter="im-unterricht">
         <h2 tabindex="-1">Gruppen bilden</h2>
       <ol>
-        <li>Im Kurs unten auf „Gruppen bilden“ tippen.</li>
+        <li>Im Kurs unten auf „Gruppen bilden“ tippen. Oben ist „Gruppen“ gewählt. Daneben findest du <a href="#manuell">„Manuell“</a> und das <a href="#gruppenpuzzle">„Gruppenpuzzle“</a>.</li>
         <li>Gruppengröße und Zusammensetzung wählen. GroupMix merkt sich die Einstellungen für jeden Kurs.</li>
         <li>Unten auf „Einteilen“ tippen. Mit „Neu einteilen“ bekommst du eine andere Aufteilung.</li>
       </ol>
 
       <h3>Gruppengröße</h3>
-      <p>Wähle „Anzahl Gruppen“ oder „Personen pro Gruppe“. Darunter siehst du, was dabei herauskommt. Geht die Teilung nicht auf, wählst du zwischen „Kleinere Gruppen bevorzugen“ und „Größere Gruppen bevorzugen“. Beide zeigen das konkrete Ergebnis.</p>
+      <p>Wähle „Anzahl Gruppen“ oder „Personen pro Gruppe“. Darunter siehst du, was dabei herauskommt. Geht die Teilung nicht auf, wählst du zwischen „Kleinere Gruppen bevorzugen“ und „Größere Gruppen bevorzugen“. Beide zeigen das konkrete Ergebnis. Bei „Personen pro Gruppe“ arbeitet niemand allein: Bleibt bei Paaren eine Person übrig, entsteht eine Dreiergruppe.</p>
 
       <h3>Zusammensetzung</h3>
       <ul>
@@ -289,9 +293,37 @@ Konrad;Maurer;m;</pre>
       <p>Zusätzlich kannst du einschalten:</p>
       <ul>
         <li><strong>„Gender gleichmäßig verteilen“:</strong> Männlich und weiblich werden möglichst gleichmäßig auf die Gruppen verteilt.</li>
-        <li><strong>„Wiederholungen vermeiden“:</strong> Wer in den letzten drei <a href="#speichern">gespeicherten Einteilungen</a> zusammen war, kommt möglichst nicht wieder zusammen. Am deutlichsten wirkt das bei „Zufällig“.</li>
+        <li><strong>„Wiederholungen vermeiden“:</strong> Wer in den letzten drei <a href="#speichern">gespeicherten Einteilungen</a> zusammen war, kommt möglichst nicht wieder zusammen. <a href="#anheften">Angeheftete Einteilungen</a> wie Tischgruppen zählen mit. Am deutlichsten wirkt das bei „Zufällig“.</li>
       </ul>
       <p class="muted">Die Gruppengröße hat immer Vorrang, danach die Regeln, dann die Zusammensetzung. Was nicht erfüllbar ist, nennt GroupMix im Ergebnis.</p>
+      </article>
+
+      <article class="topic" id="manuell" data-summary="Gruppen selbst zusammenstellen, zum Beispiel die Tischgruppen der Klasse." data-chapter="im-unterricht">
+        <h2 tabindex="-1">Gruppen selbst festlegen</h2>
+      <p>Gibt es die Gruppen schon, zum Beispiel als Tischgruppen, trägst du sie selbst ein.</p>
+      <ol>
+        <li>Im Kurs unten auf „Gruppen bilden“ tippen und oben „Manuell“ wählen.</li>
+        <li>Die Personen der ersten Gruppe antippen. Mit „Neue Gruppe“ beginnst du die nächste.</li>
+        <li>Unten auf „Weiter“ tippen und im Ergebnis auf „Fertig“.</li>
+      </ol>
+      <p>Zum Ändern tippst du eine Gruppe an. Gehst du zurück, bleiben deine Eingaben erhalten, bis du sie mit „Eingaben verwerfen“ löschst.</p>
+      <p class="muted">Gruppen, die du länger brauchst, <a href="#anheften">heftest du an</a>.</p>
+      </article>
+
+      <article class="topic" id="gruppenpuzzle" data-summary="Stamm- und Themengruppen in einem Schritt bilden." data-chapter="im-unterricht">
+        <h2 tabindex="-1">Gruppenpuzzle</h2>
+      <p>Beim Gruppenpuzzle bekommt jede Person in ihrer Stammgruppe ein Thema. In Themengruppen arbeiten alle mit demselben Thema zusammen, danach erklären sie es in ihrer Stammgruppe.</p>
+      <ol>
+        <li>Im Kurs unten auf „Gruppen bilden“ tippen und oben „Gruppenpuzzle“ wählen.</li>
+        <li>Die Zahl der Themen einstellen und unter „Aufteilung“ einen Vorschlag wählen.</li>
+        <li>Unten auf „Einteilen“ tippen.</li>
+      </ol>
+      <p>Im Ergebnis wechselst du oben zwischen „Stammgruppen“ und „Themengruppen“. Die Themen heißen A, B, C. Mit „…“ und „Themen benennen …“ gibst du ihnen Namen. Themengruppen mit mehr als fünf Personen teilt GroupMix auf. Beim Teilen entstehen zwei Bilder.</p>
+      <aside class="hinweis wissen">
+        <strong>Gut zu wissen</strong>
+        <p>Fehlt in einer Stammgruppe jemand mit einem Thema, nennt GroupMix das über den Karten und schlägt vor, wer aus einer anderen Gruppe aushelfen kann. „Wechseln“ setzt die Person um.</p>
+      </aside>
+      <p class="muted">Bei „Gemischtes Niveau“ sind Stamm- und Themengruppen gemischt. Das ist für das Gruppenpuzzle empfohlen.</p>
       </article>
 
       <article class="topic" id="hinweise" data-summary="Was GroupMix zeigt, wenn eine Regel nicht erfüllt werden konnte." data-chapter="im-unterricht">
@@ -301,7 +333,7 @@ Konrad;Maurer;m;</pre>
 
       <article class="topic" id="ergebnis-anpassen" data-summary="Personen verschieben, Änderungen rückgängig machen, speichern oder verwerfen." data-chapter="im-unterricht">
         <h2 tabindex="-1">Ergebnis anpassen</h2>
-      <p>Im Ergebnis findest du oben rechts im „…“-Menü weitere Funktionen, zum Beispiel „Personen verschieben“, <a href="#zu-spaet">„Person hinzufügen“</a>, <a href="#regel-aus-ergebnis">„Regel anlegen“</a> und das <a href="#vorstellen">Ziehen</a>.</p>
+      <p>Im Ergebnis findest du oben rechts im „…“-Menü weitere Funktionen, zum Beispiel „Personen verschieben“, <a href="#zu-spaet">„Person hinzufügen“</a>, <a href="#regel-aus-ergebnis">„Regel anlegen“</a>, <a href="#rollen-themen">Rollen und Themen</a> und das <a href="#vorstellen">Ziehen</a>.</p>
 
       <h3>Personen verschieben</h3>
       <ol>
@@ -341,6 +373,25 @@ Konrad;Maurer;m;</pre>
       <p class="muted">Die Regel gilt für künftige Einteilungen. Während der Bildschirmübertragung gibt es „Regel anlegen“ nicht.</p>
       </article>
 
+      <article class="topic" id="rollen-themen" data-summary="Jeder Person eine Rolle und jeder Gruppe ein Thema zuteilen." data-chapter="im-unterricht">
+        <h2 tabindex="-1">Rollen und Themen</h2>
+      <h3>Rollen verteilen</h3>
+      <ol>
+        <li>Im Ergebnis oben auf „…“ tippen und „Rollen verteilen …“ wählen.</li>
+        <li>Die Rollen abhaken und auf den Haken tippen.</li>
+      </ol>
+      <p>Jede Person bekommt zufällig eine Rolle, möglichst eine andere als in den letzten Einteilungen. Sie steht auf der Karte unter dem Namen. Über den Karten wechselst du zu „Rollen“: Dort stehen Ziel und Hinweise jeder Rolle, antippen zeigt sie bildschirmfüllend.</p>
+      <p>Hat eine Gruppe weniger Personen als Rollen, bekommt sie nicht alle. Mit dem Schloss legst du Rollen fest, die jede Gruppe bekommt. Eigene Rollen legst du unten mit „+“ an, eine Standardrolle passt du als Kopie an.</p>
+
+      <h3>Themen verteilen</h3>
+      <ol>
+        <li>Im Ergebnis oben auf „…“ tippen und „Themen verteilen …“ wählen.</li>
+        <li>Die Themen eintragen, eins pro Feld, und auf den Haken tippen.</li>
+      </ol>
+      <p>Jede Gruppe bekommt zufällig ein Thema. Es steht im Kopf der Karte.</p>
+      <p class="muted">Danach heißen die Einträge im „…“-Menü „Rollen“ und „Themen“, mit „Neu verteilen“ und „Entfernen“. Sind Rollen verteilt, entsteht beim Teilen ein zweites Bild mit den Rollen.</p>
+      </article>
+
       <article class="topic" id="beamer" data-summary="Die Einteilung als Bild oder Text teilen." data-chapter="im-unterricht">
         <h2 tabindex="-1">Am Beamer zeigen und teilen</h2>
       <p>Am Beamer zeigst du die Einteilung per Bildschirmübertragung. Was dabei verborgen bleibt, steht unter <a href="#zeigen-teilen">Bildschirm übertragen</a>.</p>
@@ -358,13 +409,13 @@ Konrad;Maurer;m;</pre>
       <p>Nach der Gruppenarbeit bestimmt GroupMix per Zufall, wer aus jeder Gruppe das Ergebnis vorstellt und in welcher Reihenfolge die Gruppen drankommen. Weil jede Person gezogen werden kann, sorgt die Gruppe dafür, dass alle das Ergebnis vorstellen können. Beides findest du im „…“-Menü, auch in gespeicherten Einteilungen.</p>
 
       <h3>Person je Gruppe ziehen</h3>
-      <p>Oben auf „…“ tippen und „Person je Gruppe ziehen“ wählen. In jeder Gruppe wird ein Name fett markiert. Erneutes Ziehen zieht in allen Gruppen neu.</p>
+      <p>Oben auf „…“ tippen und „Person je Gruppe ziehen“ wählen. In jeder Gruppe wird ein Name fett markiert. „Neu ziehen“ zieht in allen Gruppen neu, „Beenden“ entfernt die Markierungen.</p>
 
       <h3>Gruppe ziehen</h3>
       <ol>
         <li>Oben auf „…“ tippen und „Gruppe ziehen“ wählen. Die gezogene Gruppe bekommt ihre Position, zum Beispiel „1.“.</li>
         <li>Mit „Person ziehen“ im Hinweis bestimmst du, wer aus dieser Gruppe vorstellt.</li>
-        <li>Mit „Nächste Gruppe“ kommt die nächste dran. „Beenden“ beendet die Reihenfolge.</li>
+        <li>Mit „Nächste Gruppe“ kommt die nächste dran. „Beenden“ beendet die Reihenfolge und entfernt alle Markierungen.</li>
       </ol>
       <p>Wer fehlt, wird übersprungen. GroupMix merkt sich den Stand: Öffnest du die Einteilung in der nächsten Stunde wieder, machst du einfach mit „Nächste Gruppe“ weiter.</p>
       </article>
@@ -395,7 +446,7 @@ Konrad;Maurer;m;</pre>
 
       <article class="topic" id="letzte-einteilung" data-summary="Die zuletzt gespeicherte Einteilung wieder öffnen, etwa in der nächsten Stunde." data-chapter="mehrere-stunden">
         <h2 tabindex="-1">Letzte Einteilung öffnen</h2>
-      <p>Ganz oben im Kurs öffnet „Letzte Einteilung“ die zuletzt gespeicherte Einteilung, zum Beispiel in der nächsten Stunde. Wer heute fehlt, ist auf den Karten grau markiert. Läuft noch eine <a href="#vorstellen">Gruppenziehung</a>, zeigt der Kurs das an.</p>
+      <p>Ganz oben im Kurs unter „Einteilungen“ öffnet „Letzte Einteilung“ die zuletzt gespeicherte Einteilung, zum Beispiel in der nächsten Stunde. Wer heute fehlt, ist auf den Karten grau markiert. Läuft noch eine <a href="#vorstellen">Gruppenziehung</a>, zeigt der Kurs das an.</p>
       </article>
 
       <article class="topic" id="einteilung-anpassen" data-summary="Eine gespeicherte Einteilung ändern, wenn jemand fehlt oder dazukommt." data-chapter="mehrere-stunden">
@@ -407,9 +458,24 @@ Konrad;Maurer;m;</pre>
       </aside>
       </article>
 
+      <article class="topic" id="anheften" data-summary="Feste Gruppen wie Tischgruppen mit einem Namen dauerhaft behalten." data-chapter="mehrere-stunden">
+        <h2 tabindex="-1">Einteilungen anheften</h2>
+      <p>Feste Gruppen wie Tischgruppen heftest du mit einem Namen an. Angeheftete Einteilungen bleiben im Kurs, bis du sie löschst, und stehen unter „Einteilungen“.</p>
+      <ol>
+        <li>In einer Einteilung oben auf „…“ tippen und „Anheften …“ wählen.</li>
+        <li>Einen Namen eintragen, zum Beispiel Tischgruppen, und auf „Anheften“ tippen.</li>
+      </ol>
+      <p>Änderst du eine angeheftete Einteilung, fragt GroupMix beim Sichern nach:</p>
+      <ul>
+        <li><strong>„Nur für heute sichern“:</strong> Die Änderung gilt nur heute, zum Beispiel wenn einige fehlen. Die angeheftete Einteilung bleibt, wie sie ist.</li>
+        <li><strong>„… dauerhaft ändern“:</strong> Die angeheftete Einteilung selbst ändert sich.</li>
+      </ul>
+      <p class="muted">„Umbenennen …“ und „Löschen“ findest du im „…“-Menü der angehefteten Einteilung.</p>
+      </article>
+
       <article class="topic" id="verlauf" data-summary="Einteilungen der letzten 14 Tage ansehen, teilen, anpassen und löschen." data-chapter="mehrere-stunden">
         <h2 tabindex="-1">Verlauf</h2>
-      <p>Im Kurs oben auf „…“ tippen und „Verlauf“ wählen. Tippe auf eine Einteilung, um sie anzusehen, zu teilen oder anzupassen. Zum Löschen hältst du sie gedrückt.</p>
+      <p>Im Kurs bei „Einteilungen“ auf „Verlauf“ tippen. Tippe auf eine Einteilung, um sie anzusehen, zu teilen oder anzupassen. Zum Löschen hältst du sie gedrückt.</p>
       <p>GroupMix bewahrt Einteilungen 14 Tage auf, ältere werden automatisch gelöscht. Die neueste bleibt immer erhalten.</p>
       </article>
     </section>
@@ -460,7 +526,7 @@ Konrad;Maurer;m;</pre>
         <strong>Wichtig</strong>
         <p>Das Passwort wird nirgends gespeichert. Ohne Passwort lässt sich ein Backup nicht wiederherstellen.</p>
       </aside>
-      <p class="muted">Das Backup enthält alle Kurse mit Personen, Regeln und Verlauf. Nicht enthalten ist, wer bei der Zufallsauswahl schon dran war.</p>
+      <p class="muted">Das Backup enthält alle Kurse mit Personen, Regeln, Verlauf und angehefteten Einteilungen sowie deine eigenen Rollen. Nicht enthalten ist, wer bei der Zufallsauswahl schon dran war.</p>
 
       <h3>Backup importieren</h3>
       <ol>
@@ -479,7 +545,7 @@ Konrad;Maurer;m;</pre>
 
       <article class="topic" id="zeitraum-ende" data-summary="Am Ende des Zeitraums Kurse in einen neuen Zeitraum verschieben oder löschen." data-chapter="daten">
         <h2 tabindex="-1">Ende des Zeitraums</h2>
-      <p>Personenbezogene Daten solltest du nur so lange aufbewahren wie nötig. Ist ein Zeitraum vorbei, zum Beispiel ein Schuljahr ab dem 1. August, weist GroupMix dich oben in der Kursliste darauf hin.</p>
+      <p>Personenbezogene Daten solltest du nur so lange aufbewahren wie nötig. Ist ein Zeitraum vorbei, zum Beispiel ein Schuljahr ab dem 1. August oder ein Halbjahr, weist GroupMix dich oben in der Kursliste darauf hin.</p>
       <ol>
         <li>Im Hinweis auf „Aufräumen“ tippen.</li>
         <li>Den neuen Zeitraum prüfen. Mit „Namen hochzählen“ wird aus 8b automatisch 9b.</li>
@@ -520,8 +586,12 @@ Konrad;Maurer;m;</pre>
           <div class="answer"><p>Jede, die du benutzt: mit „Fertig“, beim Teilen, Ziehen oder Übertragen und wenn du die App verlässt. Mit „Zurück“ verwirfst du ein noch nicht gespeichertes Ergebnis. Mehr dazu unter <a href="#speichern">Einteilungen speichern</a>.</p></div>
         </details>
         <details>
+          <summary>Wie behalte ich feste Tischgruppen?</summary>
+          <div class="answer"><p>Trage sie mit „Manuell“ ein und hefte sie an. Mehr dazu unter <a href="#manuell">Gruppen selbst festlegen</a> und <a href="#anheften">Einteilungen anheften</a>.</p></div>
+        </details>
+        <details>
           <summary>Wie lange bleiben Einteilungen im Verlauf?</summary>
-          <div class="answer"><p>14 Tage, die neueste bleibt immer erhalten. Mehr dazu unter <a href="#verlauf">Verlauf</a>.</p></div>
+          <div class="answer"><p>14 Tage, die neueste bleibt immer erhalten. Angeheftete Einteilungen bleiben, bis du sie löschst. Mehr dazu unter <a href="#verlauf">Verlauf</a>.</p></div>
         </details>
         <details>
           <summary>Kann ich GroupMix in einer anderen Sprache nutzen?</summary>
