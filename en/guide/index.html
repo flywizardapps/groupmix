@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>GroupMix – Guide</title>
-  <meta name="description" content="Guide for GroupMix: set up courses and people, make groups, rules, adjust and share the result, random pick, backups, and the end of a term.">
+  <meta name="description" content="Guide for GroupMix: set up courses and people, make groups, manual groups, jigsaw, roles and topics, rules, pinned groupings, sharing, random pick, backups, and the end of a term.">
   <link rel="stylesheet" href="/groupmix/style.css?v=20261104d">
   <link rel="icon" href="/groupmix/assets/groupmix-icon-rounded.svg" type="image/svg+xml">
   <link rel="alternate" hreflang="de" href="/groupmix/anleitung/">
@@ -61,10 +61,13 @@
           <ul>
             <li><a href="#attendance">Attendance</a></li>
             <li><a href="#make-groups">Making Groups</a></li>
+            <li><a href="#manual">Setting Groups Yourself</a></li>
+            <li><a href="#jigsaw">Jigsaw</a></li>
             <li><a href="#notices">Notices After Making Groups</a></li>
             <li><a href="#adjust-result">Adjusting the Result</a></li>
             <li><a href="#late">Someone Arrives Late</a></li>
             <li><a href="#rule-from-result">Create a Rule from the Result</a></li>
+            <li><a href="#roles-topics">Roles and Topics</a></li>
             <li><a href="#share">Show and Share on the Projector</a></li>
             <li><a href="#presenting">Who Presents?</a></li>
             <li><a href="#random-pick">Random Pick</a></li>
@@ -76,6 +79,7 @@
             <li><a href="#save">Saving Groupings</a></li>
             <li><a href="#last-grouping">Open the Last Grouping</a></li>
             <li><a href="#adjust-saved">Adjust a Saved Grouping</a></li>
+            <li><a href="#pin">Pinning Groupings</a></li>
             <li><a href="#history">History</a></li>
           </ul>
         </section>
@@ -118,7 +122,7 @@
       <h3>Create a course</h3>
       <ol>
         <li>In the course list, tap “+” at the top.</li>
-        <li>Enter the name, for example 8b, and optionally a “Term” (for example 2026/27) and a “Description” (for example Mathematics).</li>
+        <li>Enter the name, for example 8b, and optionally a “Term” (for example 2026/27 or a semester like Fall 2026) and a “Description” (for example Mathematics).</li>
         <li>Tap the checkmark.</li>
       </ol>
       <p class="muted">The course list is organized by term. At the end of a term, GroupMix helps you <a href="#end-of-term">clean up</a>.</p>
@@ -223,7 +227,7 @@ Konrad;Maurer;m;</pre>
 
       <article class="topic" id="language" data-summary="Use GroupMix in a different language than your device, for example in German." data-chapter="getting-ready">
         <h2 tabindex="-1">App Language</h2>
-      <p>GroupMix is available in English, German, French, and Spanish and follows your device’s language. You can also choose a different language for GroupMix, for example German for a German class:</p>
+      <p>GroupMix is available in English, German, French, Spanish, Dutch, Danish, Swedish, and Norwegian and follows your device’s language. You can also choose a different language for GroupMix, for example German for a German class:</p>
       <ol>
         <li>In GroupMix <a href="#settings">Settings</a>, tap “Language”. The iOS Settings open.</li>
         <li>Under “Language”, choose the language you want.</li>
@@ -232,7 +236,7 @@ Konrad;Maurer;m;</pre>
       <p class="muted">If iOS doesn’t offer a choice there, only one language is set up on your device. Then add a second one in the iOS Settings under “General” › “Language &amp; Region”, and keep your current one as the device language.</p>
       <aside class="hinweis wissen">
         <strong>Good to know</strong>
-        <p>Anything you entered yourself, such as course and people’s names, stays as it is. GroupMix recognizes name lists and CSV files in all offered languages. If the app is set to Spanish, “m” means female (“mujer”).</p>
+        <p>Anything you entered yourself, such as course and people’s names, stays as it is. GroupMix recognizes name lists and CSV files in all offered languages. If the app is set to Spanish, “m” means female (“mujer”). In languages other than English and German, Settings offer “Report a Translation Issue”.</p>
       </aside>
       </article>
 
@@ -272,13 +276,13 @@ Konrad;Maurer;m;</pre>
       <article class="topic" id="make-groups" data-summary="Choose group size and composition, then make the groups." data-chapter="in-class">
         <h2 tabindex="-1">Making Groups</h2>
       <ol>
-        <li>In the course, tap “Make Groups” at the bottom.</li>
+        <li>In the course, tap “Make Groups” at the bottom. “Groups” is selected at the top. Next to it, you’ll find <a href="#manual">“Manual”</a> and <a href="#jigsaw">“Jigsaw”</a>.</li>
         <li>Choose the group size and composition. GroupMix remembers the settings for each course.</li>
         <li>Tap “Create Groups” at the bottom. “Regroup” gives you a different split.</li>
       </ol>
 
       <h3>Group size</h3>
-      <p>Choose “Number of Groups” or “People per Group”. Below it, you see the outcome. If the split doesn’t work out evenly, choose between “Prefer Smaller Groups” and “Prefer Larger Groups”. Both show the concrete result.</p>
+      <p>Choose “Number of Groups” or “People per Group”. Below it, you see the outcome. If the split doesn’t work out evenly, choose between “Prefer Smaller Groups” and “Prefer Larger Groups”. Both show the concrete result. With “People per Group”, nobody works alone: If one person is left over when making pairs, there’s a group of three.</p>
 
       <h3>Composition</h3>
       <ul>
@@ -289,9 +293,37 @@ Konrad;Maurer;m;</pre>
       <p>You can also turn on:</p>
       <ul>
         <li><strong>“Balance Gender”:</strong> Male and female are distributed across the groups as evenly as possible.</li>
-        <li><strong>“Avoid Repeats”:</strong> People who were together in the last three <a href="#save">saved groupings</a> are kept apart where possible. This has the clearest effect with “Random”.</li>
+        <li><strong>“Avoid Repeats”:</strong> People who were together in the last three <a href="#save">saved groupings</a> are kept apart where possible. <a href="#pin">Pinned groupings</a> such as table groups count too. This has the clearest effect with “Random”.</li>
       </ul>
       <p class="muted">Group size always takes precedence, then rules, then composition. GroupMix tells you in the result if something couldn’t be met.</p>
+      </article>
+
+      <article class="topic" id="manual" data-summary="Put groups together yourself, for example the table groups in your classroom." data-chapter="in-class">
+        <h2 tabindex="-1">Setting Groups Yourself</h2>
+      <p>If the groups already exist, for example as table groups, enter them yourself.</p>
+      <ol>
+        <li>In the course, tap “Make Groups” at the bottom and choose “Manual” at the top.</li>
+        <li>Tap the people in the first group. “New Group” starts the next one.</li>
+        <li>Tap “Continue” at the bottom, then “Done” in the result.</li>
+      </ol>
+      <p>To change a group, tap it. If you go back, your entries are kept until you delete them with “Discard Entries”.</p>
+      <p class="muted">Groups you need for longer, you <a href="#pin">pin</a>.</p>
+      </article>
+
+      <article class="topic" id="jigsaw" data-summary="Make home groups and expert groups in one step." data-chapter="in-class">
+        <h2 tabindex="-1">Jigsaw</h2>
+      <p>In a jigsaw, everyone gets a topic in their home group. In expert groups, everyone with the same topic works together, then they explain it in their home group.</p>
+      <ol>
+        <li>In the course, tap “Make Groups” at the bottom and choose “Jigsaw” at the top.</li>
+        <li>Set the number of topics and choose a suggestion under “Groups”.</li>
+        <li>Tap “Create Groups” at the bottom.</li>
+      </ol>
+      <p>In the result, switch between “Home Groups” and “Expert Groups” at the top. Topics are called A, B, C. With “…” and “Name Topics…”, you give them names. GroupMix splits expert groups with more than five people. Sharing creates two images.</p>
+      <aside class="hinweis wissen">
+        <strong>Good to know</strong>
+        <p>If a home group has nobody present for a topic, GroupMix says so above the cards and suggests who from another group can help out. “Switch” moves that person.</p>
+      </aside>
+      <p class="muted">With “Mixed Levels”, both home groups and expert groups are mixed. This is recommended for a jigsaw.</p>
       </article>
 
       <article class="topic" id="notices" data-summary="What GroupMix shows when a rule couldn’t be met." data-chapter="in-class">
@@ -301,7 +333,7 @@ Konrad;Maurer;m;</pre>
 
       <article class="topic" id="adjust-result" data-summary="Move people, undo changes, save or discard." data-chapter="in-class">
         <h2 tabindex="-1">Adjusting the Result</h2>
-      <p>More features are in the “…” menu at the top right of the result, for example “Move People”, <a href="#late">“Add Person”</a>, <a href="#rule-from-result">“Create Rule”</a>, and <a href="#presenting">picking</a>.</p>
+      <p>More features are in the “…” menu at the top right of the result, for example “Move People”, <a href="#late">“Add Person”</a>, <a href="#rule-from-result">“Create Rule”</a>, <a href="#roles-topics">roles and topics</a>, and <a href="#presenting">picking</a>.</p>
 
       <h3>Move people</h3>
       <ol>
@@ -341,6 +373,25 @@ Konrad;Maurer;m;</pre>
       <p class="muted">The rule applies to future groupings. “Create Rule” isn’t available while you mirror your screen.</p>
       </article>
 
+      <article class="topic" id="roles-topics" data-summary="Give everyone a role and each group a topic." data-chapter="in-class">
+        <h2 tabindex="-1">Roles and Topics</h2>
+      <h3>Assign roles</h3>
+      <ol>
+        <li>In the result, tap “…” at the top and choose “Assign Roles…”.</li>
+        <li>Check the roles and tap the checkmark.</li>
+      </ol>
+      <p>Everyone gets a random role, if possible a different one than in recent groupings. It appears on the card below the name. Above the cards, switch to “Roles” to see each role’s goal and tips; tap one to show it full screen.</p>
+      <p>If a group has fewer people than roles, it doesn’t get all of them. Use the lock to choose roles that every group gets. Add your own roles with “+” at the bottom; to adjust a standard role, edit a copy.</p>
+
+      <h3>Assign topics</h3>
+      <ol>
+        <li>In the result, tap “…” at the top and choose “Assign Topics…”.</li>
+        <li>Enter the topics, one per field, and tap the checkmark.</li>
+      </ol>
+      <p>Each group gets a random topic. It appears at the top of the card.</p>
+      <p class="muted">Afterwards, the “…” menu shows “Roles” and “Topics”, with “Reassign” and “Remove”. If roles are assigned, sharing creates a second image with the roles.</p>
+      </article>
+
       <article class="topic" id="share" data-summary="Share the grouping as an image or as text." data-chapter="in-class">
         <h2 tabindex="-1">Show and Share on the Projector</h2>
       <p>To show the grouping on the projector, mirror your screen. What stays hidden is described under <a href="#show-share">Mirroring Your Screen</a>.</p>
@@ -358,13 +409,13 @@ Konrad;Maurer;m;</pre>
       <p>After group work, GroupMix picks at random who presents each group’s results and in which order the groups take their turn. Since anyone can be picked, each group makes sure that everyone can present its results. You find both in the “…” menu, also in saved groupings.</p>
 
       <h3>Pick one per group</h3>
-      <p>Tap “…” at the top and choose “Pick One per Group”. In each group, one name is marked in bold. Picking again picks anew in all groups.</p>
+      <p>Tap “…” at the top and choose “Pick One per Group”. In each group, one name is marked in bold. “Pick Again” picks anew in all groups, “Stop” removes the marks.</p>
 
       <h3>Pick a group</h3>
       <ol>
         <li>Tap “…” at the top and choose “Pick a Group”. The picked group shows its position, for example “1.”.</li>
         <li>Tap “Pick a Person” in the notice to pick who presents for this group.</li>
-        <li>Tap “Next Group” for the next one. “Stop” ends the order.</li>
+        <li>Tap “Next Group” for the next one. “Stop” ends the order and removes all marks.</li>
       </ol>
       <p>People who are absent are skipped. GroupMix remembers where you are: If you open the grouping again in the next lesson, just continue with “Next Group”.</p>
       </article>
@@ -395,7 +446,7 @@ Konrad;Maurer;m;</pre>
 
       <article class="topic" id="last-grouping" data-summary="Reopen the most recently saved grouping, for example in the next lesson." data-chapter="several-lessons">
         <h2 tabindex="-1">Open the Last Grouping</h2>
-      <p>At the very top of the course, “Last Grouping” opens the most recently saved grouping, for example in the next lesson. People who aren’t here today appear dimmed on the cards. If <a href="#presenting">group picking</a> is still in progress, the course shows it.</p>
+      <p>At the very top of the course, under “Groupings”, “Last Grouping” opens the most recently saved grouping, for example in the next lesson. People who aren’t here today appear dimmed on the cards. If <a href="#presenting">group picking</a> is still in progress, the course shows it.</p>
       </article>
 
       <article class="topic" id="adjust-saved" data-summary="Change a saved grouping when someone is missing or joins." data-chapter="several-lessons">
@@ -407,9 +458,24 @@ Konrad;Maurer;m;</pre>
       </aside>
       </article>
 
+      <article class="topic" id="pin" data-summary="Keep fixed groups such as table groups with a name." data-chapter="several-lessons">
+        <h2 tabindex="-1">Pinning Groupings</h2>
+      <p>Pin fixed groups such as table groups with a name. Pinned groupings stay in the course until you delete them and appear under “Groupings”.</p>
+      <ol>
+        <li>In a grouping, tap “…” at the top and choose “Pin…”.</li>
+        <li>Enter a name, for example Table Groups, and tap “Pin”.</li>
+      </ol>
+      <p>When you change a pinned grouping, GroupMix asks when saving:</p>
+      <ul>
+        <li><strong>“Save for Today Only”:</strong> The change applies only today, for example when some people are missing. The pinned grouping stays as it is.</li>
+        <li><strong>“Change … Permanently”:</strong> The pinned grouping itself changes.</li>
+      </ul>
+      <p class="muted">You’ll find “Rename…” and “Delete” in the “…” menu of the pinned grouping.</p>
+      </article>
+
       <article class="topic" id="history" data-summary="View, share, adjust, and delete groupings from the last 14 days." data-chapter="several-lessons">
         <h2 tabindex="-1">History</h2>
-      <p>In the course, tap “…” at the top and choose “History”. Tap a grouping to view, share, or adjust it. To delete it, touch and hold it.</p>
+      <p>In the course, tap “History” next to “Groupings”. Tap a grouping to view, share, or adjust it. To delete it, touch and hold it.</p>
       <p>GroupMix keeps groupings for 14 days; older ones are deleted automatically. The newest one is always kept.</p>
       </article>
     </section>
@@ -460,7 +526,7 @@ Konrad;Maurer;m;</pre>
         <strong>Important</strong>
         <p>The password isn’t stored anywhere. Without it, a backup can’t be restored.</p>
       </aside>
-      <p class="muted">The backup contains all courses with their people, rules, and history. It doesn’t include who has had a turn in Random Pick.</p>
+      <p class="muted">The backup contains all courses with their people, rules, history, and pinned groupings, as well as your own roles. It doesn’t include who has had a turn in Random Pick.</p>
 
       <h3>Import a backup</h3>
       <ol>
@@ -479,7 +545,7 @@ Konrad;Maurer;m;</pre>
 
       <article class="topic" id="end-of-term" data-summary="At the end of a term, move courses to a new term or delete them." data-chapter="data">
         <h2 tabindex="-1">End of a Term</h2>
-      <p>You should keep personal data only as long as necessary. When a term is over, for example a school year from 1 August, GroupMix reminds you at the top of the course list.</p>
+      <p>You should keep personal data only as long as necessary. When a term is over, for example a school year from 1 August or a semester, GroupMix reminds you at the top of the course list.</p>
       <ol>
         <li>Tap “Clean Up” in the notice.</li>
         <li>Check the new term. With “Increment Names”, 8b automatically becomes 9b.</li>
@@ -520,8 +586,12 @@ Konrad;Maurer;m;</pre>
           <div class="answer"><p>Every one you use: with “Done”, when sharing, picking, or mirroring, and when you leave the app. “Back” discards a result that hasn’t been saved yet. More under <a href="#save">Saving Groupings</a>.</p></div>
         </details>
         <details>
+          <summary>How do I keep fixed table groups?</summary>
+          <div class="answer"><p>Enter them with “Manual” and pin them. More under <a href="#manual">Setting Groups Yourself</a> and <a href="#pin">Pinning Groupings</a>.</p></div>
+        </details>
+        <details>
           <summary>How long do groupings stay in the history?</summary>
-          <div class="answer"><p>14 days; the newest one is always kept. More under <a href="#history">History</a>.</p></div>
+          <div class="answer"><p>14 days; the newest one is always kept. Pinned groupings stay until you delete them. More under <a href="#history">History</a>.</p></div>
         </details>
         <details>
           <summary>Can I use GroupMix in a different language?</summary>
