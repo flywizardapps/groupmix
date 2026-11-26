@@ -176,6 +176,11 @@ header nav a[aria-current="page"] { color: var(--text); }
 .hero h1 { margin: 0 0 12px; color: var(--on-ground); }
 .hero p { font-size: 1.2rem; margin: 0; max-width: 34rem; }
 
+/* App-Store-Plakette von Apple (unverändert, mindestens 40 px hoch, Freiraum ringsum). */
+.store-badge { display: inline-block; margin-top: 20px; line-height: 0; }
+.store-badge img { height: 48px; width: auto; }
+.store-badge:focus-visible { outline-color: var(--on-ground); }
+
 .hero-mark {
   display: block;
   width: min(80%, 360px);
