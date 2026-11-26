@@ -351,3 +351,18 @@ header nav a[aria-current="page"] { color: var(--text); }
   }
   .js .guide .g-crumbs .g-find { display: none; }
 }
+
+/* Pressekit: Steckbrief und Bildschirmfotos. */
+.facts { display: grid; grid-template-columns: max-content 1fr; gap: 6px 20px; margin: 0; }
+.facts dt { color: var(--secondary); }
+.facts dd { margin: 0; }
+@media (max-width: 499px) {
+  .facts { grid-template-columns: 1fr; gap: 0; }
+  .facts dd { margin-bottom: 8px; }
+}
+.shots { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 16px 0; }
+.shots img { display: block; width: 100%; height: auto; border-radius: 12px; }
+.press-icon { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; }
+.press-icon img { width: 96px; height: 96px; }
+blockquote { margin: 16px 0; padding: 4px 0 4px 16px; border-left: 4px solid var(--accent); }
+blockquote p { margin: 0 0 4px; }
